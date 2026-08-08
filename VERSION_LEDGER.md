@@ -7,7 +7,8 @@ Append-only. One row per version. Filename and self-declared version must match 
 | `ontology_kernel_v8.2.md` | v8.3 | 2026-08-08 | 10.0 (est., residual) | not recorded |
 | `ontology_kernel_v8.4.md` | v8.4 (run 001) | 2026-08-08 | 19.0 | superseded |
 | `ontology_kernel_v8.4.md` | v8.4 (run 002) | 2026-08-08 | 20.7 | superseded |
-| `ontology_kernel_v8.4.md` | v8.4 (run 003) | 2026-08-08 | 21.2 | `f2b178ae54c934c82924a2474fccfa3509b54bf7aa0c64ef87f78f51002d8614` |
+| `ontology_kernel_v8.4.md` | v8.4 (run 003) | 2026-08-08 | 21.2 | superseded |
+| `ontology_kernel_v8.4.md` | v8.4 (run 004) | 2026-08-08 | 22.8 | `e3653f96d7c5e047da07e73bad76b748c1380fc0fd6f0abde05cc544787b3e5c` |
 
 **Row 1 defect (logged, not corrected).** The v8.2-named file self-declared v8.3 and listed `ontology_kernel_v8.3.md` as itself. Under Pan-Thesis X this failed the meta-rule the document declares non-negotiable. Retained here rather than silently fixed, per append-only discipline.
 

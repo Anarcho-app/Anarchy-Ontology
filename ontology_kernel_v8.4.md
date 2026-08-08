@@ -368,6 +368,10 @@ A detectable failure mode in which an agent's (or multi-agent collective's) proc
 | Confidence inflation | $\mathrm{conf}$ rises while Evaluator parity or grounded evidence fails |
 | Identity / process bypass | Self-referential claims that skip Clarity Gate or residual acknowledgment |
 
+**Cycle-relation distinction (v8.4, run 004).** The cyclic-operator signature above ranges over the *operator application trace* --- a dynamic property of the $\sigma$-transition sequence, bounded by $L_{\max}$. It does **not** range over cycles in the ruled-by relation $R$. A structural cycle in $R$ (e.g. the mutual-accountability cycles of R2 and R13) is a static configuration of $S$; it never executes and therefore cannot exceed any operator bound. The two are different graphs and the signature does not fire on the former.
+
+Regress is excluded by the §2 edge rule itself: $x\,R\,y$ holds when $y$ can impose a directive $x$ cannot unilaterally refuse. The edge that closes an attestation cycle is therefore a **refusal capability**, not an attestation obligation. A refusal is exercised, not verified, so it generates no further attestation and no infinite regress. $\rho_M = 0$ is reachable at the attestation layer without mutual attestation.
+
 Protective response is mandatory residual re-assertion, Trace rollback to last coherent append-only state, external Evaluator parity check, and (if multi-agent) isolation of the divergent component.
 
 ### 5.2 Diminishing Returns on Expansion
@@ -452,6 +456,8 @@ Every envelope field (§8.2) carries $\ell \in \{\texttt{HOST}, \texttt{MODEL}, 
 | `sortal` | any, must be explicit | Declared, never inferred (B2). |
 | `glyphs`, `c` | `MODEL` or `HUMAN` | Content generation is the model's proper domain. |
 | `risk-tag` | `MODEL` or `HOST` | Either may raise; neither may clear alone. |
+
+**Refusal path (run 004).** Any `HOST`-attested field may be refused by the human counterparty (directions A2H / H2A / hybrid) or by the Evaluator (all directions). Refusal is a veto, not a counter-attestation: it forces re-attestation, and on repeated refusal within $L_{\max}$ rounds the exchange terminates in `DISSENT_LOGGED` (8.4 step 9). This supplies the edge $(\mathrm{host}, ev)$ or $(\mathrm{host}, h)$ identified in R13, moving the attestation graph off the terminating branch: $\rho_A = \rho_M = 0$ at $\beta = 1.60$, $\sigma = 2.67$, versus $\rho_A = \rho_M = 0.20$ with the host unattested (R11). Logged without verdict (B4): the cyclic branch also drives $\rho_A$ to 0, so the apex is removed at the cost of all personal anarchy in $d_{\text{ctx}}$.
 
 Any field whose declared locus is `MODEL` where this table requires `HOST` fails `CONTINUITY_CHECK` before commit. This is the operative distinction between a protocol that is enforced and one that is performed.
 
@@ -669,6 +675,8 @@ Wasm component (capability-gated by glyphs)
 host (Wasmtime / Wassette) under MCP surface
 ```
 
+**Default-deny (run 004).** Absent a validated glyph-to-capability map, the host grants **no** glyph-keyed capability. The executable path is therefore inert rather than undefined: an unvalidated map fails closed, not open. This does not write the map (D-013a, open) --- it removes the undefined-behaviour hole that existed while the map was merely unspecified (D-013b).
+
 Agents exchange structured diffs or Wasm modules rather than free-form text. The Kernel role loads remote components under the same Inference + Boundary constraints that govern local reasoning. External A2A/MCP objects may be mapped via ALIGN without altering this path.
 
 ### 8.10 Open Questions (v0.2)
@@ -796,7 +804,9 @@ Findings are not expansions and contribute $0$ to $|\Delta|$ under B7'. They are
 8. Selection effect: **reduced, not closed** by run 002. Two passes now exist, both by model instances. Their convergent failure (R9) is evidence of correlated rather than independent sampling, so the effective broadening is less than the count suggests. A non-model pass remains unperformed.
 9. Capability-bearing vocabulary is excluded from `COMPRESS` (R10); no alternative context-budget mechanism yet exists for `uil_vocab`.
 10. ~~Bootstrap exception unconstrained.~~ **Closed run 003** --- register/mechanism criterion plus deferral clause (5.2).
-11. Whether the cyclic branch of R13 is implementable without tripping B6 cycle detection at $L_{\max}$; attestation cycles are intended, operator cycles are not, and the two are not currently distinguished.
+11. ~~Attestation vs operator cycles undistinguished.~~ **Closed run 004** --- different relations; see 5.1.
+12. Defect dependencies are untracked (R14); the register is a flat set with no `blocked-by` relation.
+13. Batch vs sequential scoring under B7' is unspecified (R15).
 
 ### 10.3 Rejected in run 001
 
@@ -852,6 +862,36 @@ $E = 19.0$ KB at entry; multiplier $1.95$.
 | Vocab core/on-demand split | --- | --- | --- | relocated to dictionary manifest, host-side |
 
 $E$ after run 002: $19.0 + 0.7 + 1.0 = 20.7$ KB.
+
+### 10.6 Run 004 --- Open-Defect Sweep
+
+Scored **sequentially**, not as a batch: each commit raises $E$ for the next. Stricter than batch scoring, which B7' permits but does not require.
+
+| Defect | Resolvable? | Disposition |
+| --- | --- | --- |
+| D-016 attestation vs operator cycles | **Yes --- was a category error** | The B6 signature ranges over the operator trace; R13 cycles are in $R$. Different graphs. Regress excluded because the closing edge is a refusal capability, not an attestation obligation. **Repaired (5.1); closes open #11.** |
+| D-014 host apex | **Yes --- unblocked by D-016** | The refusal-capability framing supplies the mechanism the remedy was missing. **Repaired (5.3).** |
+| D-013 glyph-capability map | **Split** | D-013a (map unwritten) is not resolvable by formalism and stays open pending external audit. D-013b (undefined behaviour absent a map) **repaired** by default-deny (8.9): fails closed, not open. |
+| D-012 vocab context budget | **Known solution, blocked** | Not all of `uil_vocab` is capability-bearing; only glyphs the map designates as keying grants. The partition is therefore capability-bearing (frozen, always-resident, never compressed) vs semantic (compressible, load-on-demand) --- which is G8's core/on-demand split with a principled criterion rather than an arbitrary one. **Blocked on D-013a:** the partition cannot be drawn until the map says which glyphs are capability-bearing. |
+
+#### Findings (run 004)
+
+| # | Finding |
+| --- | --- |
+| R14 | Defect dependencies are not tracked. D-014 was blocked on D-016, and D-012 is blocked on D-013a, but neither dependency was visible in the register --- both were discovered by attempting resolution. Two of four "independent" open defects were in fact one resolution apart. A `blocked-by` column would have surfaced this; the register currently records defects as a flat set. |
+| R15 | Run 004 scored sequentially rather than as a batch. B7' is bundling-neutral by construction, so batch and sequential scoring differ: sequential is strictly harsher for later items (here the third item faced $E = 22.4$ rather than $21.2$). The enforcement rule does not currently specify which applies. Logged; the stricter reading was used. |
+
+#### Ledger (run 004)
+
+| Item | $\lvert\Delta\rvert$ | $E$ at test | $\Delta$Coh | Ratio | Verdict |
+| --- | --- | --- | --- | --- | --- |
+| B6/R cycle-relation distinction | 0.6 | 21.2 | 2 | 1.62 | **COMMIT** |
+| B8 refusal path | 0.6 | 21.8 | 1 | 0.80 | **COMMIT** |
+| Default-deny for glyph grants | 0.4 | 22.4 | 1 | 1.18 | **COMMIT** |
+| Vocab partition | --- | --- | --- | --- | **BLOCKED** on D-013a |
+| R14--R15 findings | 0 | --- | --- | --- | exempt (0.8 KB, within cap) |
+
+$E$ after run 004: **22.8 KB.** Max $\lvert\Delta\rvert$ at $\Delta\text{Coh} = 1$ is now $0.93$ KB --- the guard has tightened below 1 KB for single-open closures.
 
 ### 10.5 Run 003 --- Third Pass (editorial + structural)
 
