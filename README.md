@@ -128,8 +128,6 @@ $x\, R\, y$ holds when $y$ can impose a directive that $x$ cannot unilaterally r
 | Constitutional republic | 5   | 11  | 0.00 | 0.00 | 2.20 | 2.75 |
 | Sortal star             | 4   | 3   | 0.25 | 0.25 | 0.75 | 3.00 |
 
----
-
 ## II. Ascriptive Layer — Anarchism
 
 > “One of the problems with dealing with anarchism is that there are many people whose ideas are anarchist, but who do not necessarily call themselves anarchists.”  
