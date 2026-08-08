@@ -284,18 +284,20 @@ Expansions that fail this inequality are rejected before Syn-thesis. The factor 
 - Directly supports AOAP continuity checks and expansion discipline (Section 8)
 ---
 ## 6. LLM Role Formalisms
+
 | Role | Formalism | Key Mechanisms |
-|-------------------------------|---------------------------------------------------------------------------|-----------------------------------------------------|
-| **LLM as CPU** | $Y_t = F_{\text{LLM}}(\Omega_t)$ s.t. $S(C_t) \leq 300$, TTC_opt, CONSTRAINED_DECODE | INFER_OPT + ACT_STEER + EVICT |
-| **LLM as Dataset** | $M_{\theta} \approx P(\text{data} \mid \text{KB})$, PARAM_MEM + RLM($x = \text{decompose}(X)$) | AGEMEM, DAMCS_KG, FOCUS_COMPRESS, MEMTOOL |
-| **LLM as Kernel** | $\text{self}(K) = K \cup \Delta_{\text{UIL}}$, ADAPT_LOOP + GATED_MEM + HYPERAGENTS | VERIFY_SEP + PARITY_PROFILE |
-| **LLM as Compiler** | $\text{code} = \text{STRUCTURED\_DIFF}(\text{ontology} \to \text{exec})$ | CODE_SCAFFOLD + ONTO_TOOL + SKVM |
+|------|-----------|----------------|
+| **LLM as CPU** | $Y_t = F_{\mathrm{LLM}}(\Omega_t)$ s.t. $S(C_t) \le 300$, TTC_opt, CONSTRAINED_DECODE | INFER_OPT + ACT_STEER + EVICT |
+| **LLM as Dataset** | $M_\theta \approx P(\mathrm{data} \mid \mathrm{KB})$, PARAM_MEM + RLM | AGEMEM, DAMCS_KG, FOCUS_COMPRESS, MEMTOOL |
+| **LLM as Kernel** | $\mathrm{self}(K) = K \cup \Delta_{\mathrm{UIL}}$, ADAPT_LOOP + GATED_MEM + HYPERAGENTS | VERIFY_SEP + PARITY_PROFILE |
+| **LLM as Compiler** | code = STRUCTURED_DIFF(ontology → exec) | CODE_SCAFFOLD + ONTO_TOOL + SKVM |
 | **LLM as Simulator** | $(S', R) \sim \mathcal{T}(S, A; \theta)$ | RESEARCH_MDP + MARKOV_ENFORCE + FROZEN_ENVIRONMENT |
-| **LLM as Evaluator / Judge** | $v = V_{\text{sep}}(\text{gen}, \text{ref})$ | PROVER_VERIFIER + CONSENSUS_NOT_VERIFY + PARITY_PROFILE |
-| **LLM as Memory / Retrieval** | $\text{recall} = \text{MEMTOOL}(\text{anchor} + \text{latent\_collaborate})$ | ACC + SAMEP + LATENT_COLLAB |
-| **LLM as Interface / Translator** | $\text{UI} = \text{DECLARATIVE\_RENDER}(X, \text{A2UI})$ | AG_UI + EMPATHIC_SIGNAL + TURN_LANG |
-| **LLM as Explorer / Discoverer** | $\text{new} \sim \text{MAP\_ELITES}(\text{archive}, \text{fitness})$ | EVOLVE + SAGE_ROLLOUT + KNOWLEDGE_EXPANSION |
-| **LLM as Monitor / Guard** | $\text{alert} = \text{AE\_DOMAIN\_PENALTY}(traj)$ | TRAJECTORY_GUARD + LAYER_HEALTH_WEIGHT + MCP_RISK |
+| **LLM as Evaluator / Judge** | $v = V_{\mathrm{sep}}(\mathrm{gen}, \mathrm{ref})$ | PROVER_VERIFIER + CONSENSUS_NOT_VERIFY + PARITY_PROFILE |
+| **LLM as Memory / Retrieval** | recall = MEMTOOL(anchor + latent_collaborate) | ACC + SAMEP + LATENT_COLLAB |
+| **LLM as Interface / Translator** | UI = DECLARATIVE_RENDER(X, A2UI) | AG_UI + EMPATHIC_SIGNAL + TURN_LANG |
+| **LLM as Explorer / Discoverer** | new ∼ MAP_ELITES(archive, fitness) | EVOLVE + SAGE_ROLLOUT + KNOWLEDGE_EXPANSION |
+| **LLM as Monitor / Guard** | alert = AE_DOMAIN_PENALTY(traj) | TRAJECTORY_GUARD + LAYER_HEALTH_WEIGHT + MCP_RISK |
+
 ---
 ## 7. Core Ontology Assets & Toolchain
 ```
@@ -334,9 +336,11 @@ Agents (still bound by Inference Principles 01--12 + Pan-Thesis X + Boundary Pri
   $$
 - Agents may advertise, align, accept, or reject dictionary sets exactly as they do ontology fragments.
 - The process core and Pan-Thesis / Inference operators remain untouched by any dictionary injection.
+
 **Current dictionaries (status-aware)**
+
 | # | File | Approx. size | Entries | Status |
-|---|-------------------------------|--------------|---------|-----------------|
+|---|------|--------------|---------|--------|
 | 1 | `bayesian.dict.yaml` | 3.3 KB | 30+ | injectable |
 | 2 | `causal.dict.yaml` | 2.9 KB | 25 | injectable |
 | 3 | `pan_thesis.dict.yaml` | 3.0 KB | 28 | injectable |
@@ -346,6 +350,7 @@ Agents (still bound by Inference Principles 01--12 + Pan-Thesis X + Boundary Pri
 | 7 | `arxiv_refs.dict.base` | 0.9 KB | --- | injectable |
 | 8 | `mined_corpus.dict.parquet` | 11.7 KB | 124 | injectable |
 | 9 | `brain.dict.yaml` (planned) | --- | 5+ | gated by B7 |
+
 **PROTOCOL (AOAP) glyph stubs** (also dictionary-resident)
 - `ALIGN`
 - `CONTINUITY`
