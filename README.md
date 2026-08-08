@@ -1,10 +1,30 @@
-# Anarchy in Hierarchy — Key Points & Formalisms
+# Anarchy-Ontology
+
+A relativized formal language that distinguishes **anarchy** (structural facts about a ruled-by relation \(R\)) from **anarchism** (ascriptive attitudes toward a target relation).
+
+The framework forces explicit indices on every claim and maintains a strict separation between the two layers. No theorem is asserted that bridges structural facts about \(R\) to ascriptive facts about speakers or interpreters. It is offered as a clarifying instrument, not as a political program, a theological system, or a complete theory of power.
+
+### Motivation, Scope, and Provisional Status
+
+Most persistent disputes about anarchy and anarchism collapse two independent questions or suppress required indices. This document isolates those questions. Every structural claim must carry a relation-domain index and a node-subdomain index; unindexed claims are treated as ill-formed.
+
+The framework is deliberately limited and provisional:
+
+- It does not decide whether any historical figure “was an anarchist.”
+- It does not rank regimes normatively.
+- It does not claim that formal distinctions dissolve substantive political or theological disagreement; they only relocate the disagreement to an explicit premise (most often a sortal assignment).
+
+Strongest external objection (acknowledged, not straw-manned): high-density formal treatment of anarchism, especially when paired with close analysis of early Christian source texts, currently attracts pathologizing dismissal in some reception environments regardless of internal rigor. The present text accepts that social fact as a constraint on presentation while refusing to dilute the formal content.
+
+---
+
 # Relativized Formalism for Anarchy and Anarchism
+
 *(stipulated, not etymological: the earliest attested* anarchia *was systemic — Athens, 404 BCE)*
 
-Two layers. **Structural**: facts about $R$. **Ascriptive**: facts about what subjects call themselves and what interpreters read in them. No theorem crosses between them.
+Two layers. **Structural**: facts about \(R\). **Ascriptive**: facts about what subjects call themselves and what interpreters read in them. No theorem crosses between them.
 
-**$-y$ vs. $-ism$.** *Anarchy* ($-ia$, a state) is structural: a fact about $R$, indexed by domain. *Anarchism* ($-ism$, a doctrine) is ascriptive: an attitude toward a target $R^{\ast}$, indexed by interpreter. Neither entails the other in either direction. Most disputes in this area are a confusion of the two, or a suppressed index on one of them.
+**\(-y\) vs. \(-ism\).** *Anarchy* (\(-ia\), a state) is structural: a fact about \(R\), indexed by domain. *Anarchism* (\(-ism\), a doctrine) is ascriptive: an attitude toward a target \(R^{\ast}\), indexed by interpreter. Neither entails the other in either direction. Most disputes in this area are a confusion of the two, or a suppressed index on one of them.
 
 ---
 
@@ -12,294 +32,232 @@ Two layers. **Structural**: facts about $R$. **Ascriptive**: facts about what su
 
 ## Core
 
-```math
+\[
 \mathrm{An}_R(x)\;\iff\;\neg\exists y\,(y\neq x\land x\,R\,y)
-```
+\]
 
-$R$ = ruled-by relation, $x\,R\,y$ = "$x$ is ruled by $y$"; irreflexive; $S$ finite.
+\(R\) = ruled-by relation, \(x\,R\,y\) = “\(x\) is ruled by \(y\)”; irreflexive; \(S\) finite.
 
-```math
+\[
 A_R=\{x\in S\mid\mathrm{An}_R(x)\},\qquad A_R=A_{R^{+}}
-```
+\]
 
-The $y\neq x$ clause: self-rule is not being ruled. *Auto-nomos* is compatible with $\mathrm{An}_R$.
+The \(y\neq x\) clause: self-rule is not being ruled. *Auto-nomos* is compatible with \(\mathrm{An}_R\).
 
 ## Two predicates, one signature
 
-```math
+\[
 \text{an-archy}_1(x):=\mathrm{An}_R(x)\qquad\text{local, unary — a subject with no ruler}
-```
+\]
 
-
-```math
+\[
 \text{An-archy}_2(S,R):=(\rho_M=0)\qquad\text{systemic, shape-defined — rule exists, no ruler is un-ruled}
-```
-
+\]
 
 ## Apex vs. hermit
 
-```math
+\[
 \text{apex: }\mathrm{An}_R(x)\land\exists z\,(z\,R\,x)\qquad\text{hermit: }\mathrm{An}_R(x)\land\neg\exists z\,(z\,R\,x)
-```
+\]
 
-$A_R^{\mathrm{apex}}=\{x\in A_R\mid\exists z\,(z\,R\,x)\}$. Kings answerable to none vs. the ungoverned isolate.
+\(A_R^{\mathrm{apex}}=\{x\in A_R\mid\exists z\,(z\,R\,x)\}\). Kings answerable to none versus the ungoverned isolate.
 
 ## Relativization
+
 Every anarchy claim carries **two indices**: which relation, and over which subdomain. Unindexed claims are ill-formed.
 
-**Relation domain.** $R_d$ for $d\in\{\text{legal},\text{economic},\text{religious},\dots\}$.
-**Node subdomain.** For $D\subseteq S$, the restriction $R{\upharpoonright}D=R\cap(D\times D)$, and
+**Relation domain.** \(R_d\) for \(d\in\{\text{legal},\text{economic},\text{religious},\dots\}\).
 
-```math
+**Node subdomain.** For \(D\subseteq S\), the restriction \(R{\upharpoonright}D=R\cap(D\times D)\), and
+
+\[
 \mathrm{An}^{D}_{R}(x)\iff x\in D\land\neg\exists y\in D\,(y\neq x\land x\,R\,y)
-```
+\]
 
-
-```math
+\[
 A^{D}_{R}=\{x\in D\mid\mathrm{An}^{D}_R(x)\},\qquad
 \rho^{D}_{A}=\frac{|A^{D}_{R}|}{|D|},\qquad
 \rho^{D}_{M}=\frac{|A^{D,\mathrm{apex}}_{R}|}{|D|}
-```
+\]
 
-$D=S$ recovers the unrelativized case. Three subdomains matter in practice:
+\(D=S\) recovers the unrelativized case. Three subdomains matter in practice:
 
-- **Sortal.** $S=H\uplus T$, $H$ = human subjects, $T$ = non-human or transcendent nodes. $\rho^{H}_{A}$ measures anarchy *among humans*.
-- **Communal.** $C\subseteq H$ an in-group. $\rho^{C}_{A}$ measures anarchy *within a community* — the "among you" scope.
-- **Full.** $D=S$.
+- **Sortal.** \(S=H\uplus T\), \(H\) = human subjects, \(T\) = non-human or transcendent nodes. \(\rho^{H}_{A}\) measures anarchy *among humans*.
+- **Communal.** \(C\subseteq H\) an in-group. \(\rho^{C}_{A}\) measures anarchy *within a community*.
+- **Full.** \(D=S\).
 
-**Theorem (sortal divergence).** $\rho^{H}_{A}$ and $\rho_{M}$ are independent. In particular $R{\upharpoonright}H=\varnothing$ with a unique $t\in T$ ruling all of $H$ gives
+**Theorem (sortal divergence).** \(\rho^{H}_{A}\) and \(\rho_{M}\) are independent. In particular \(R{\upharpoonright}H=\varnothing\) with a unique \(t\in T\) ruling all of \(H\) gives
 
-```math
+\[
 \rho^{H}_{A}=1\quad\text{(universal anarchy among humans)}\qquad\text{while}\qquad \rho_{M}=\tfrac1{|S|}>0\quad\text{(a star: pure monarchy)}
-```
+\]
 
-The same configuration is **maximal anarchy** under the sortal reading and **pure monarchy** under the unsorted one. Neither reading is an error; they are different indices. Every dispute over "theocratic anarchism" is this divergence and nothing else.
+The same configuration is maximal anarchy under the sortal reading and pure monarchy under the unsorted one. Neither reading is an error; they are different indices. Every dispute over “theocratic anarchism” reduces to this divergence.
 
 ## Ratios
 
-```math
+\[
 \rho_A=\frac{|A_R|}{|S|},\quad
 \rho_M=\frac{|A_R^{\mathrm{apex}}|}{|S|},\quad
 \beta=\frac{|R|}{|S|},\quad
 \rho_{\mathrm{rul}}=\frac{|\{y\mid\exists x,\;x\,R\,y\}|}{|S|},\quad
 \sigma=\frac{|R|}{|\{y\mid\exists x,\;x\,R\,y\}|}
-```
+\]
 
-$\beta$ = mean rulers per subject; $\rho_{\mathrm{rul}}$ = fraction who rule; $\sigma$ = mean span, the $n$ in "1 : n".
-**Identity.** $\beta=\sigma\cdot\rho_{\mathrm{rul}}$. All ratios have relativized forms $\beta^{D},\sigma^{D},\rho^{D}_{\mathrm{rul}}$.
+\(\beta\) = mean rulers per subject; \(\rho_{\mathrm{rul}}\) = fraction who rule; \(\sigma\) = mean span.
+
+**Identity.** \(\beta=\sigma\cdot\rho_{\mathrm{rul}}\). All ratios have relativized forms.
 
 ## Regimes (scale-relative)
-- **Concentration**: $\rho_A$ low, $\sigma$ high.
-- **Amplification**: edge-deletion enlarging $A_R$.
-- **Universal**: $A_R=S\iff R=\varnothing$.
-- **Residual**: $A_R\neq\varnothing$ while $R\neq\varnothing$.
-- **Apexless**: $\rho_M=0$ with $|R|>0$ = $\text{An-archy}_2$.
-- **Tyranny**: $|A_R^{\mathrm{apex}}|=1$, $\rho_A$ minimal.
-- **Horizontal**: $R{\upharpoonright}D=\varnothing$ with $R\neq\varnothing$ — no rule *within* $D$, rule from outside it retained. Sortal ($D=H$) or communal ($D=C$).
+
+- **Concentration**: \(\rho_A\) low, \(\sigma\) high.
+- **Amplification**: edge-deletion enlarging \(A_R\).
+- **Universal**: \(A_R=S\iff R=\varnothing\).
+- **Residual**: \(A_R\neq\varnothing\) while \(R\neq\varnothing\).
+- **Apexless**: \(\rho_M=0\) with \(|R|>0\) = \(\text{An-archy}_2\).
+- **Tyranny**: \(|A_R^{\mathrm{apex}}|=1\), \(\rho_A\) minimal.
+- **Horizontal**: \(R{\upharpoonright}D=\varnothing\) with \(R\neq\varnothing\) — no rule *within* \(D\), rule from outside retained.
 
 ## Lemmas
-**Antitone.** $R\subseteq R'\Rightarrow A_{R'}\subseteq A_R$.
-**Amplification.** Deleting $(a,b)$ enlarges $A_R$ **iff** $b$ was $a$'s unique ruler.
-**Universality.** $A_R=S\iff R=\varnothing$, under irreflexivity.
-**Restriction monotone.** $D\subseteq D'\Rightarrow A^{D'}_R\cap D\subseteq A^{D}_R$. Shrinking the subdomain can only create anarchy, never destroy it — which is why sortal restriction is the standard route to an anarchy claim.
+
+**Antitone.** \(R\subseteq R'\Rightarrow A_{R'}\subseteq A_R\).
+
+**Amplification.** Deleting \((a,b)\) enlarges \(A_R\) iff \(b\) was \(a\)’s unique ruler.
+
+**Universality.** \(A_R=S\iff R=\varnothing\), under irreflexivity.
+
+**Restriction monotone.** \(D\subseteq D'\Rightarrow A^{D'}_R\cap D\subseteq A^{D}_R\). Shrinking the subdomain can only create anarchy, never destroy it.
 
 ## Apexlessness
-$\rho_M=0$ iff **every ruler is ruled**.
 
-**Theorem (circularity).** If $\rho_M=0$ and $R\neq\varnothing$, then $R$ contains a cycle, and every ruled vertex has an upward path into one.
-*Proof.* Take $a_0\,R\,a_1$. Then $a_1$ is a ruler, so ruled by some $a_2$; $a_2$ is a ruler, so ruled by $a_3$; iterate. The chain is infinite in a finite set, so it repeats. $\square$
-**Contrapositive.** Finite acyclic rule with $R\neq\varnothing$ always has an apex. Apexless rule is *circular* rule.
+\(\rho_M=0\) iff every ruler is ruled.
 
-**Corollary (horizontal vs. apexless).** Horizontal anarchy over $D$ does **not** imply apexlessness. $R{\upharpoonright}D=\varnothing$ is compatible with a single external apex ruling all of $D$ — indeed that is the acyclic, maximally centralized case. The two anarchies pull in opposite directions.
+**Theorem (circularity).** If \(\rho_M=0\) and \(R\neq\varnothing\), then \(R\) contains a cycle, and every ruled vertex has an upward path into one.
 
-**Rival formalizations of "no apex", rejected.** $\rho_M\le\tau$ (arbitrary threshold, self-defeating); *no dominating vertex* (too weak — any monarchy ruling through intermediaries passes); *no vertex reachable from all others* (too weak differently — two disjoint kingdoms pass, which is two apexes, not none).
+*Proof.* Take \(a_0\,R\,a_1\). Then \(a_1\) is a ruler, so ruled by some \(a_2\); iterate. In a finite set the chain must repeat. \(\square\)
+
+**Contrapositive.** Finite acyclic rule with \(R\neq\varnothing\) always has an apex. Apexless rule is circular rule.
+
+**Corollary (horizontal vs. apexless).** Horizontal anarchy over \(D\) does not imply apexlessness. The two notions pull in opposite directions.
+
+**Rival formalizations of “no apex” rejected.** Arbitrary thresholds on \(\rho_M\); absence of a dominating vertex; absence of a vertex reachable from all others. Each fails to capture the intended notion.
 
 ## Aggregation
-**Theorem.** Let $\Phi(S,R)$ be isomorphism-invariant and *anarchy-grounded* — a function of $A_R$ as a bare subset, not of $R$'s shape. Isomorphisms are the permutations preserving $A_R$; two configurations are isomorphic iff they agree on $(|A_R|,|S\setminus A_R|)$. Hence every such $\Phi$ is a function of $\rho_A$ and $|S|$.
 
-**Corollary.** Any Boolean "the system is anarchic" that is anarchy-grounded is a threshold on $\rho_A$ — arbitrary.
+**Theorem.** Let \(\Phi(S,R)\) be isomorphism-invariant and anarchy-grounded (a function of \(A_R\) as a bare subset). Then \(\Phi\) depends only on \(\rho_A\) and \(|S|\).
 
-**Scope.** Systemic anarchy is not an *aggregate* of personal anarchy. It is not undefined: $\rho_M$, $\rho^D_A$, acyclicity, height are all well-defined. $\text{An-archy}_2$ escapes the theorem because $\rho_M$ reads which elements of $A_R$ hold subjects.
+**Corollary.** Any Boolean claim “the system is anarchic” that is anarchy-grounded is merely a threshold on \(\rho_A\).
 
-## Instantiation
-**Edge rule.** $x\,R\,y$ iff $y$ can impose on $x$ a directive $x$ cannot unilaterally refuse without sanction, and $y$ is an identifiable person, office, or (under a declared sortal extension) transcendent node. Nodes are offices, not persons, above household scale. Fix one $R_d$ per pass.
+Systemic anarchy is not an aggregate of personal anarchy. \(\rho_M\), \(\rho^D_A\), acyclicity, and height remain well-defined independently.
 
-| Case | $\lvert S\rvert$ | $\lvert R\rvert$ | $\rho_A$ | $\rho_M$ | $\beta$ | $\sigma$ | $\rho_{\mathrm{rul}}$ |
+## Instantiation (edge rule)
+
+\(x\,R\,y\) holds when \(y\) can impose on \(x\) a directive that \(x\) cannot unilaterally refuse without sanction, and \(y\) is an identifiable person, office, or (under explicit sortal extension) transcendent node. Above household scale, nodes are offices. One \(R_d\) is fixed per analysis.
+
+| Case | \(\lvert S\rvert\) | \(\lvert R\rvert\) | \(\rho_A\) | \(\rho_M\) | \(\beta\) | \(\sigma\) | \(\rho_{\mathrm{rul}}\) |
 |:-----|:-----------------:|:-----------------:|:--------:|:--------:|:-------:|:-------:|:-----------------:|
 | Household (2 parents, 2 children) | 4 | 4 | 0.50 | 0.50 | 1.00 | 2.00 | 0.50 |
 | Monarchy (king, 2 nobles, 2 peasants) | 5 | 4 | 0.20 | 0.20 | 0.80 | 1.33 | 0.60 |
-| Constitutional republic (electorate, legislature, executive, court, bureau) | 5 | 11 | 0.00 | 0.00 | 2.20 | 2.75 | 0.80 |
-| Sortal star ($t \in T$; 3 humans) | 4 | 3 | 0.25 | 0.25 | 0.75 | 3.00 | 0.25 |
+| Constitutional republic | 5 | 11 | 0.00 | 0.00 | 2.20 | 2.75 | 0.80 |
+| Sortal star (\(t\in T\); 3 humans) | 4 | 3 | 0.25 | 0.25 | 0.75 | 3.00 | 0.25 |
 
-Republic edges: electorate ruled by legislature and court; legislature by electorate and court; executive by all three; court by executive and legislature; bureau by executive and legislature. $A_R=\varnothing$.
-Sortal star, restricted: $\rho^{H}_{A}=1$, $\rho^{H}_{M}=0$, $R{\upharpoonright}H=\varnothing$. Unrestricted it is a star — the same shape as the monarchy row.
-
-**Result.** The republic is $\text{An-archy}_2$ ($\rho_M=0$) with zero $\text{an-archy}_1$ ($\rho_A=0$) — apexless because circular. The sortal star is its exact opposite: $\rho^{H}_{A}=1$ with $\rho_M>0$ — universally anarchic among humans and perfectly monarchic overall. $\rho_A$ alone separates none of the four.
+The republic is \(\text{An-archy}_2\) (\(\rho_M=0\)) with \(\rho_A=0\). The sortal star is its opposite: \(\rho^{H}_{A}=1\) with \(\rho_M>0\).
 
 ---
 
 # II. Ascriptive layer — anarchism
 
-> "One of the problems with dealing with anarchism is that there are many people whose ideas are anarchist, but who do not necessarily call themselves anarchists."
-> — Howard Zinn, *Rebels Against Tyranny*, interview by Ziga Vodovnik, CounterPunch, 12 May 2008
+> “One of the problems with dealing with anarchism is that there are many people whose ideas are anarchist, but who do not necessarily call themselves anarchists.”  
+> — Howard Zinn (2008)
 
-## Two predicates
+## Predicates
 
-```math
+\[
 L(x)\iff x\text{ self-identifies as an anarchist}
-```
+\]
 
-
-```math
+\[
 I^{k}_{j}(x)\iff\text{interpreter }j\text{ reads }x\text{ as advocating a target }R^{\ast}\text{ with property }k
-```
+\]
 
-$L$ is self-ascribed and near-checkable. $I$ requires an ascriber, so it carries the interpreter index $j$ and the target-property index $k$. Dropping either is the commonest error: "was $x$ an anarchist?" is ill-formed until both are fixed.
+\(L\) is near-checkable. \(I\) carries both an interpreter index and a property index. “Was \(x\) an anarchist?” is ill-formed until both are fixed.
 
-## The advocacy types are not free — the structural layer supplies them
+## Advocacy types supplied by the structural layer
 
-```math
-I^{1}:\ \rho_A(R^{\ast})\uparrow
-```
+\[
+I^{1}:\ \rho_A(R^{\ast})\uparrow \qquad\text{(individualist)}
+\]
 
+\[
+I^{2}:\ \rho_M(R^{\ast})=0 \qquad\text{(acephalous)}
+\]
 
-```math
-I^{2}:\ \rho_M(R^{\ast})=0
-```
+\[
+I^{3}_{D}:\ R^{\ast}{\upharpoonright}D=\varnothing \qquad\text{(horizontal / sortal)}
+\]
 
+\(I^{3}_{H}\) is satisfied by configurations that maximally violate \(I^{2}\). The two targets are incompatible; both can be held sincerely. This is the formal content of the long dispute over whether Christian anarchism counts as anarchism.
 
-```math
-I^{3}_{D}:\ R^{\ast}{\upharpoonright}D=\varnothing
-```
+## Label and interpretation
 
-- $I^{1}$ **individualist** — maximize personal un-ruledness. Voluntarist and Stirnerite formulations.
-- $I^{2}$ **acephalous** — abolish the apex; accountability closes into cycles. Proudhon, Kropotkin, "abolition of the state", "rejection of coercive hierarchy".
-- $I^{3}_{D}$ **horizontal / sortal** — no rule *within* $D$, rule from outside $D$ permitted or required. Theocratic and hierocratic formulations take $D=H$; communitarian and monastic ones take $D=C$.
-
-$I^{3}$ is genuinely a third type, not a variant: by the horizontal/apexless corollary, $I^{3}_{H}$ is *satisfied by* a configuration that maximally violates $I^{2}$. An $I^{3}$-advocate and an $I^{2}$-advocate can both be sincere anarchists and want incompatible worlds. This is the formal content of the long dispute over whether Christian anarchism is anarchism; the answer is that it is $I^{3}_{H}$ and not $I^{2}$, and the disputants are each correct about the type they have in mind.
-
-## Zinn's claim
-
-```math
+\[
 I^{k}_{j}(x)\;\not\Rightarrow\;L(x)
-```
+\]
 
-The label-free set is non-empty. The converse fails independently:
+The converse also fails. The term “anarchist” is mid-19th-century; every pre-1840 subject has \(L(x)=\bot\) by construction. Questions about earlier figures are therefore questions about \(I\) alone.
 
-| | $L$ | $\neg L$ |
-|---|---|---|
-| $I$ | Proudhon, Kropotkin, Zinn | **Zinn's population**: Paine, Thoreau, the Transcendentalists |
-| $\neg I$ | self-described anarchists failing the criterion | most subjects |
+Titles (\(\mathrm{Ttl}\)) form a third, independent object. Abolishing honorifics does not delete edges of \(R\). Servant-inversion constrains conduct along an edge; it presupposes the edge and deletes nothing.
 
-$L$ is time-bounded as $I$ is not: the word dates from Proudhon in the mid-19th century, so $L(x)=\bot$ for every pre-1840 subject **by construction**. "Was [pre-modern figure] an anarchist?" is therefore a question about $I$ alone, and $L$-evidence is irrelevant to it in both directions.
-
-## Label-free residual
-
-```math
-Z^{k}_{j}=\{x\in S\mid I^{k}_{j}(x)\land\neg L(x)\}
-```
-
-**Not** $\{x\in A_R\mid I\land\neg L\}$. Zinn's population is not inside $A_R$: Thoreau was jailed, Paine prosecuted — both ruled. $A_R\cap Z$ is a distinct, much smaller object.
-
-## Non-aggregation, ascriptive
-
-```math
-\rho_L=\frac{|\{x\mid L(x)\}|}{|S|},\qquad \rho_{I^k}=\frac{|\{x\mid I^{k}_{j}(x)\}|}{|S|}
-```
-
-$\rho_{I^k}$ determines nothing about $\rho_M$ or $\rho^{D}_{A}$. A population wholly $I^{2}$-positive can sit under an unbroken apex; an apexless order can be held by a population with $\rho_I=0$. This blocks *there are anarchists here* ⟹ *this is an anarchy*, for the same reason the structural theorem blocks *some are un-ruled* ⟹ *the system is anarchic*. Two independent failures of aggregation, one per layer, no bridge across.
-
-## Titles are not edges
-A third ascriptive object, distinct from both $L$ and $R$:
-
-```math
-\mathrm{Ttl}(x,\tau)\iff x\text{ bears honorific }\tau
-```
-
-Abolishing $\mathrm{Ttl}$ does not delete any edge of $R$. A rule "let no one be *called* master" constrains the honorific relation; the ruled-by relation is untouched, and $\rho_A,\rho_M,\rho^D_A$ are unchanged. Conversely an untitled office can hold every edge it held before.
-
-**This is the single most common source of false anarchy readings.** Anti-honorific texts are read as anti-authority texts. Formally they operate on different objects, and a corpus can abolish titles while retaining sanctions with no inconsistency whatever.
-
-Servant-inversion — "the greatest among you shall be your servant" — is a third thing again: it constrains *conduct along* an edge and reassigns the criterion for rank. It presupposes rank exists. It deletes nothing.
+No aggregation theorem connects the density of \(L\) or \(I^{k}_{j}\) to any structural ratio.
 
 ---
 
-# III. Worked instantiation — the Jesus corpus
+# III. Worked example: early Christian source texts
 
-A test case exercising every index at once. The formalism does not settle any doctrinal question; it locates precisely where the doctrinal question sits.
+A single test case that exercises every index. The formalism does not settle any doctrinal question; it isolates the exact point at which doctrine must be supplied.
 
-## Structural reading, by domain
+### Structural readings
 
-**$R_{\text{political}}$.** $\mathrm{An}(x)=\bot$. A Roman prefect could impose a non-refusable sanction and demonstrably did. "Political hermit" fails the edge rule.
+- Political domain: \(\mathrm{An}(x)=\bot\).
+- Religious domain, unsorted: \(\rho_M>0\) (Matt 28:18; 19:28; 18:15–18).
+- Religious domain, sorted \(H/T\): \(\rho^{H}_{A}=1\), \(\rho_M=1/|S|\) (Matt 23:8–10).
+- Communal restriction: horizontal claim inside \(C\) (Mark 10:42–45).
 
-**$R_{\text{religious}}$, unsorted.** Matt 28:18 ("all authority is given unto me") is a maximal apex claim; Matt 19:28 assigns thrones; Matt 18:15-18 specifies a sanction procedure ending in expulsion, which is an edge with declared enforcement. $\rho_M>0$, decisively. Not $\text{An-archy}_2$.
+Two internal tensions are resolved only by distinguishing titles from edges and conduct-along-edges from edge deletion. Under that resolution the corpus is not \(I^{2}\).
 
-**$R_{\text{religious}}$, sorted.** Matt 23:8-10 supplies the sort partition explicitly: *father* is barred "upon the earth" because one Father is "in heaven". This is $H/T$ in the text's own words. The claim is $R{\upharpoonright}H=\varnothing$ with a unique $t\in T$ — exactly the sortal star, $\rho^{H}_{A}=1$, $\rho_M=\tfrac1{|S|}$.
+### The hinge
 
-**$R\upharpoonright C$.** "The rulers of the Gentiles exercise lordship… it shall not be so among you" (Mark 10:42-45) is scoped to $C$, not $H$: it *contrasts* an out-group where $R$ holds with an in-group where it does not. This is $I^{3}_{C}$, a communal claim, not a universal political one — and it is consistent with "my kingdom is not of this world" rather than in tension with it.
+\(\rho^{H}_{A}=1\) requires the relevant node to be placed in \(T\). If it is placed in \(H\), both \(\rho^{H}_{A}\) and \(\rho^{H}_{M}\) change at once. The entire anarchism reading turns on that single sortal assignment — a doctrinal commitment the formalism cannot supply. Readers who assign \(T\) (Tolstoy, Ellul, and the Christian-anarchist tradition) and readers who assign \(H\) are both reasoning correctly from their respective premises.
 
-## Two internal tensions the formalism exposes
+### Ascriptive coordinates
 
-1. **Matt 23:2-3 vs. Matt 23:8-10**, same discourse. "The scribes and Pharisees sit in Moses' seat; whatsoever they bid you observe, that observe and do" *retains* a human-to-human edge with directive force. Ten verses later, human titles are barred. Both hold only if 23:8-10 operates on $\mathrm{Ttl}$ and not on $R$ — titles abolished, edges retained.
-2. **Mark 10:42-45 vs. Matt 18:15-18.** Lordship is barred within $C$; a binding expulsion procedure is specified within $C$. Both hold only if 10:42-45 constrains conduct along edges rather than their existence — servant-inversion, not deletion.
+- \(L=\bot\) (term postdates the material by centuries). Nothing follows from this in either direction.
+- \(I^{3}_{H,j}\) varies with the interpreter.
+- \(I^{2}_{j}\) is negative on the reading that retains the sanction procedures.
 
-Under the reading that resolves both, the corpus is **not** $I^{2}$: it is anti-honorific and anti-domineering while retaining sanction. That is a coherent and well-attested position, and it is not apexlessness.
+### Methodological note on a prior likelihood-ratio claim
 
-## The crux is one node's sort
-
-$\rho^{H}_{A}=1$ requires $t\in T$. If the referent of "one is your Master" is assigned to $H$, then $R{\upharpoonright}H\neq\varnothing$, $\rho^{H}_{A}$ falls from $1$ to $1/|H|$, and $\rho^{H}_{M}$ rises from $0$ to $1/|H|$ — a human apex.
-
-> **The entire anarchism reading turns on the sort assignment of a single node, and that assignment is a doctrinal commitment the formalism cannot supply.**
-
-This is the honest terminus. Tolstoy and Ellul assign $T$ and read $I^{3}_{H}$; readers who assign $H$ read a monarchy. Both are reasoning correctly from their premise. John 10:34 ("ye are gods") is notable here as the one text that would *dissolve* the partition rather than shift one node across it — with the caveat that its source, Psalm 82, addresses unjust judges under condemnation, and its Johannine function is christological.
-
-## Ascriptive reading
-- $L=\bot$, trivially: the term postdates the subject by eighteen centuries. **Nothing follows from this**, in either direction.
-- $I^{3}_{H,j}$ varies with $j$: positive for Tolstoy, Ellul, and the Christian-anarchist tradition; negative for readers assigning the Master-node to $H$, and for readers who take Matt 23:8-10 as a $\mathrm{Ttl}$-constraint.
-- $I^{2}_{j}$: negative on the resolving reading above, for any $j$ who counts Matt 28:18 and Matt 18:15-18.
-
-Three coordinates, three different answers, no contradiction.
-
-## On the Bayesian calculation
-
-The likelihood-ratio computation returning $677{,}376:1$, and its extension to $\approx3.7\times10^{12}:1$, is not a structural result. It is $I_{j}$ for one $j$, with the index suppressed and a decimal expansion attached. Six defects, in order of severity:
-
-**1. Independence fails.** Multiplying LRs requires conditional independence given the hypothesis. Matt 23:8-10 and 23:11-12 are adjacent verses in one discourse; Matt 23:11 and Mark 10:42-45 are one tradition in two recensions; Luke 17:21 and John 18:36 are one theme. These are not eight witnesses but roughly six clusters counted eight times. Taking the maximum LR per cluster instead of the product:
-
-```math
-8\times8\times6\times9\times5\times0.8=13{,}824\quad\text{not}\quad677{,}376
-```
-
-a factor of 49 lost to double-counting alone.
-
-**2. The hypothesis space omits the majority scholarly position.** Odds-form updating requires $P(H_a)+P(H_0)=1$. The live options include apocalyptic eschatology (Schweitzer, Ehrman), theocratic messianism, Jewish reform, and quietism. "My kingdom is not of this world" is at least as well explained by apocalypticism as by anarchism — it is evidence against *Zealot revolt*, which is not evidence for anarchism. With the true hypothesis outside the partition, the posterior is uninterpretable.
-
-**3. The sample is selected on the conclusion.** Updating on a filtered corpus is invalid without modeling the filter. The "adding all his words leaves it unchanged, most are LR≈1" step is where this bites: the omitted counter-evidence is not neutral. Matt 23:2-3, Matt 19:28, Matt 18:15-18, Matt 28:18 all carry LR $<1$ and none appears. Assigning them by the same free-hand method used for the originals — say $0.2,\,0.25,\,0.3,\,0.2$ — gives $13{,}824\times0.003\approx41:1$. The result has moved four orders of magnitude on choices no less defensible than the originals.
-
-**4. The LRs are outputs, not inputs.** The "Why this LR?" column justifies a *direction*; the magnitudes (6, 8, 7, 9) are free parameters fixed after the conclusion. Nothing constrains 9 rather than 2. The magnitudes are the result.
-
-**5. $H_a$ bundles separable claims.** As defined it mixes $I^{1}$, $I^{2}$, $I^{3}$, non-violence, and interiority. Evidence for non-resistance is not evidence for apexlessness: a pacifist theocracy satisfies the first and violates the second. Matt 5:38-44 (LR 9, the single heaviest weight) bears on non-violence and is close to silent on $\rho_M$.
-
-**6. The conclusion equivocates $-y$ and $-ism$.** "Jesus' ideology was anarchism" is an $I$-claim; the verses cited about the kingdom's nature are read as $-y$-claims about $R$. The argument slides between them.
-
-**What survives.** A defensible version puts apocalypticism in the hypothesis space, clusters correlated pericopes, selects passages adversarially, runs sensitivity analysis, states $\kappa$ as one of $I^{1}/I^{2}/I^{3}_{D}$, and reports the output as $I^{k}_{j}$ — an interpreter's reading with its indices visible. It will not return a number with eleven significant figures, and the honest finding is that the corpus supports $I^{3}_{D}$ far better than $I^{2}$, conditional on a sort assignment it cannot itself justify.
+A circulated calculation returning extremely high likelihood ratios in favor of an anarchist reading is rejected on ordinary grounds: dependence among pericopes, incomplete hypothesis space (apocalypticism and related options omitted), selection on the conclusion, free magnitude parameters, bundling of separable claims, and equivocation between structural and ascriptive layers. A defensible analysis clusters correlated passages, includes the major alternative hypotheses, and reports results as indexed \(I^{k}_{j}\) claims rather than as unindexed structural facts.
 
 ---
 
-## Historical continuity
-Family → tribe → chiefdom → state → religion changes only $|S|$, the shape of $R$, and which sorts are admitted to $S$.
-Residual personal anarchy ($\rho_A>0$) has coexisted at every scale; the universal state ($\rho_A=1$) has not. Horizontal anarchy ($\rho^{D}_{A}=1$ for some declared $D$) is common and cheap — it is what every hierarchy grants its own top tier.
-Athens 404 BCE — governance without archon — is $\rho_M=0$ with $|R|>0$: $\text{An-archy}_2$. Note $\rho_L=0$ there, twenty-three centuries before the word existed.
+## Historical note
 
-## The pendulum
-> "Politics is a pendulum whose swings between anarchy and tyranny are fueled by perennially rejuvenated illusions."
+Residual personal anarchy (\(\rho_A>0\)) has coexisted at every scale; universal anarchy (\(\rho_A=1\)) has not. Horizontal anarchy over a declared subdomain is common. Athens 404 BCE supplies an early case of \(\rho_M=0\) with \(|R|>0\) and \(\rho_L=0\).
 
-Well-formed reading: a trajectory $(\rho_A(t),\rho_M(t))$ between $\rho_M=0$ and $|A^{\mathrm{apex}}_R|=1$. Both poles are shape-facts. The illusion, where there is one, is the expectation that either pole is stable — by the circularity theorem the apexless pole holds only while the cycles hold, and breaking one edge produces an apex immediately.
+## Limitations (explicit)
 
-*Widely attributed, but only through quotation collections, wording unstable ("perennially" / "perpetually"), no primary source located. Used unattributed, as illustration only. Contrast the Zinn line, which has an interview of record.*
+- The edge rule remains stipulative and needs sharper operational criteria across domains.
+- The framework is static; no dynamics are supplied.
+- Stability of \(\rho_M=0\) under edge perturbation is open.
+- Empirical measurement protocols for the ratios are not developed here.
+- The framework is silent on normative evaluation.
+- High formal density on this particular topic currently carries elevated reception risk in some environments; that is a social fact, not an internal defect of the distinctions.
 
-## Closure
-**Structural signature:** $R_d$; the local predicate $\mathrm{An}$; the set-former $A$; restriction ${\upharpoonright}D$; cardinal counting terms; edge add/delete. Every claim indexed by $(d,D)$.
-**Ascriptive signature:** the unary predicates $L$, $I^{k}_{j}$, $\mathrm{Ttl}$, their extensions and ratios. These attach to subjects, never to edges.
+## Citation
 
-$\text{an-archy}_1$ is exhausted by $\mathrm{An}_R,A_R,\rho_A$ and edge operations; $\text{An-archy}_2$ by $\rho_M$; horizontal anarchy by $\rho^{D}_{A}$. Nothing aggregates the first into the second, horizontal anarchy implies neither, and nothing bridges the ascriptive layer to any of them.
+Cite by commit hash when precision is required.
+
+## License
+
+No license currently declared. Scholarly quotation with attribution is permitted.
