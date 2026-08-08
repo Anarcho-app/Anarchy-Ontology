@@ -121,12 +121,12 @@ Any isomorphism-invariant measure that depends only on the set $A_R$ is a functi
 
 $x\, R\, y$ holds when $y$ can impose a directive that $x$ cannot unilaterally refuse without sanction, and $y$ is an identifiable person, office, or (under explicit sortal extension) transcendent node. Above household scale, nodes are offices.
 
-| Case | $|S|$ | $|R|$ | $\rho_A$ | $\rho_M$ | $\beta$ | $\sigma$ |
-|------|-------|-------|----------|----------|---------|---------|
-| Household (2+2) | 4 | 4 | 0.50 | 0.50 | 1.00 | 2.00 |
-| Monarchy | 5 | 4 | 0.20 | 0.20 | 0.80 | 1.33 |
-| Constitutional republic | 5 | 11 | 0.00 | 0.00 | 2.20 | 2.75 |
-| Sortal star | 4 | 3 | 0.25 | 0.25 | 0.75 | 3.00 |
+| Case                        | $|S|$ | $|R|$ | $\rho_A$ | $\rho_M$ | $\beta$ | $\sigma$ |
+|-----------------------------|-------|-------|----------|----------|---------|----------|
+| Household (2+2)             | 4     | 4     | 0.50     | 0.50     | 1.00    | 2.00     |
+| Monarchy                    | 5     | 4     | 0.20     | 0.20     | 0.80    | 1.33     |
+| Constitutional republic     | 5     | 11    | 0.00     | 0.00     | 2.20    | 2.75     |
+| Sortal star                 | 4     | 3     | 0.25     | 0.25     | 0.75    | 3.00     |
 
 ---
 
