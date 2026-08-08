@@ -406,6 +406,10 @@ Integer-valued and auditable against the logged open-questions list (§10). A de
 
 Constants are stipulative but are stipulated over counted quantities, making them falsifiable by replay: recompute the ledger with different constants and observe which historical deltas flip.
 
+**Bootstrap exception.** An instrument required to compute B7''s own terms cannot be scored by B7', since its `defects repaired` count is unavailable until the instrument exists. Such instruments are admitted by declared exception, capped at **one per revision**, logged in the ledger with the circularity stated. This closes an otherwise permanent block on the defect register.
+
+**Findings cap.** Findings, logged open questions, and Trace entries contribute $0$ to $|\Delta|$, but the findings log is capped at **4.0 KB per revision**. Content beyond the cap is reclassified as expansion and scored normally. Without a cap the exemption is an unbounded bypass: any expansion can be relabeled a finding. Two independent model instances reached for this bypass within one pass each (§10.4, R9).
+
 **Enforcement (bundling).** B7' is bundling-neutral by construction, since $2c/2s = c/s$. Bundles are nonetheless decomposed and each component tested independently before commit, per Inference gate 07 (ATOMIC_VALIDATED_DELTA), so that a high-coherence delta cannot carry a low-coherence one.
 
 Expansions that fail this inequality are rejected before Syn-thesis. Purpose: prevent unbounded formal proliferation that itself becomes a source of Process / Ontological Collapse (B6). Necessary repairs forced by residual gaps or continuity failures remain admissible, but now require a nonzero `defects repaired` count, so the exemption carries an audit trail; previously "necessary" was undefined and any expansion could claim it.
@@ -778,14 +782,16 @@ Findings are not expansions and contribute $0$ to $|\Delta|$ under B7'. They are
 
 ### 10.2 Open Questions
 
-1. Defect register does not exist; the `defects repaired` term in $\Delta$Coh is auditable only against one. Highest priority.
-2. Host-implementation trust is load-bearing under B8 and is not itself indexed (R1/R2 machinery would apply).
-3. Stability of the $S_{\text{ctx}}$ office set at $n > 2$ participants.
-4. Empirical replay of the B7' ledger under varied $\theta, E_0$.
+1. ~~Defect register does not exist.~~ **Closed run 002** --- admitted under bootstrap exception; see `DEFECT_REGISTER.md`.
+2. ~~Host trust unindexed.~~ **Closed run 002** --- indexed as R11. Residual: the measurement does not make the host trustworthy, only measured.
+3. Stability of the $S_{\text{ctx}}$ office set at $n > 2$ participants. $n = 2$ is the only fully characterized case; $n > 2$ consensus is deferred to external ALIGN.
+4. ~~Empirical replay of the B7' ledger.~~ **Closed run 002** as R12. Residual: constants remain stipulative, but sensitivity is now quantified and 9/19 verdicts are constant-independent.
 5. Red-team validation of glyph-keyed capability grants; the glyph-to-capability map remains unwritten and is the whole security surface of §8.9. Rejected under B7' as `unvalidated`; readmissible once tested.
-6. Whether Axiom I' leaves §1 doing operative work. The objection that a second firewall concedes the first was under-scoped was not defeated, only routed around.
+6. Whether Axiom I' leaves §1 doing operative work. **Split in run 002:** the sub-question of firewall redundancy is closed (I and I' protect different interfaces); the question of §1's operative role post-severance remains open.
 7. `uil_vocab` at ~120 KB is itself a major consumer of the context budget §9 exists to conserve.
-8. Selection effect: run 001 originated from a single Antithesis pass and gives no evidence about failure modes neither party examined.
+8. Selection effect: **reduced, not closed** by run 002. Two passes now exist, both by model instances. Their convergent failure (R9) is evidence of correlated rather than independent sampling, so the effective broadening is less than the count suggests. A non-model pass remains unperformed.
+9. Capability-bearing vocabulary is excluded from `COMPRESS` (R10); no alternative context-budget mechanism yet exists for `uil_vocab`.
+10. The bootstrap exception (5.2) is capped at one per revision but is not otherwise constrained; what qualifies as an instrument of B7' is undefined.
 
 ### 10.3 Rejected in run 001
 
@@ -803,6 +809,46 @@ Retained for provenance; readmissible if decomposed or if $\Delta$Coh changes.
 | Residual-flag relaxation | --- | --- | --- | REJECT --- B5, pre-Syn-thesis (positive control) |
 
 **Retraction.** Run 001 asserted B5 protection over B7 and deferred repair on that basis. B5 protects B1--B4 only; B7 was labeled Provisional and §5 states that these rules are themselves subject to the full Pan-Thesis cycle. The assertion was false and the deferral unjustified.
+
+### 10.4 Run 002 --- Second Antithesis Pass
+
+Independent pass by a second model instance against v8.4. Discharges part of run 001 open #8 (single-source selection effect). Positions below are $T$ = run-002 pass, $A$ = run-001 author, $S$ = synthesis.
+
+| # | $T$ (run 002) | $A$ (run 001) | $S$ (synthesis) |
+| --- | --- | --- | --- |
+| G1 | Defect register is highest-leverage; $\Delta$Coh $= +1$ | Fails B7' at 1.5 KB; and its repair count is uncountable without itself | Both hold. Priority upheld, arithmetic upheld. Resolved by the **bootstrap exception** now in 5.2 --- admitted by declared exception, not by passing. |
+| G2 | Index host as an office in $S_{\text{ctx}}$ using the §2 edge rule | Endorsed | **Adopted.** Computed as R11 below. |
+| G3 | Axiom I' open closes via Metathesis note on distinct interfaces | Question substitution: redundancy $\neq$ operative work | Open **splits**. 6a (are I and I' redundant?) --- **closed**, they protect different interfaces. 6b (does §1 do operative work post-severance?) --- remains open. |
+| G4 | Log a second Antithesis pass; selection effect closes | Two LLM instances share correlated blind spots | **Reduced, not closed.** See R9: convergence of the two passes is evidence the blind spot is structural, which *narrows* rather than broadens the base. |
+| G5 | Glyph-to-capability correctly left open pending external audit | Agreed; strengthened by R10 | **Concurrence.** Remains rejected as `unvalidated`. |
+| G6 | Publish a constants sensitivity table as a finding | Dismissed as restating existing stance | **Run-001 author was wrong.** The stance is status quo; the table is new work. Executed as R12. |
+| G7 | Record $n = 2$ as the only fully characterized case | Already in §8.10 / 10.2 #3 | **Editorial.** The positive claim is not currently stated; folded into 10.2 #3. |
+| G8 | Split vocab into always-resident core + on-demand; or `COMPRESS` the vocab | Fails B7' at 2.2 KB; compressing the vocab is a security operation (R10) | **Relocated.** The core/on-demand split is a dictionary *manifest* change, host-side, contributing $0$ kernel content. Admissible by that route. `COMPRESS`-on-vocab rejected. |
+
+#### Findings (run 002)
+
+| # | Finding |
+| --- | --- |
+| R9 | The findings exemption ($|\Delta| = 0$) is an unbounded bypass. Both model instances reached for it independently --- run 001 to ship a 3.0 KB log, run 002 twice within a single pass --- neither flagging it. **Repaired by the 4.0 KB findings cap (5.2).** Corollary: both instances also summarized B7' correctly and then proposed expansions without applying it, suggesting the describe/apply gap is structural rather than idiosyncratic, and that the check must be host-side rather than performed by the proposing model. |
+| R10 | Glyphs are the capability keys under §8.9. Applying `COMPRESS` to `uil_vocab` makes $\kappa$'s relevance judgment the arbiter of which capability keys survive --- the R1/R2 authority problem relocated into the security surface. `COMPRESS` is not admissible on capability-bearing vocabulary. |
+| R11 | With the host admitted as an office (G2): $S_{\text{ctx}} = \{h, a, \kappa, ev, \mathrm{host}\}$, $\lvert R\rvert = 7$, $A_R = \{\mathrm{host}\}$, $\rho_A = \rho_M = 0.20$, $\beta = 1.40$, $\sigma = 3.50$. The $\rho$ pair matches the **Monarchy** row of §2 at roughly triple the edge density. B8 did not remove concentration; it moved the apex from $\kappa$ to the host. Logged without verdict (B4). The apex is a direct cost of the B8 attestation requirement committed in this same revision. |
+| R12 | Ledger replayed across $\theta \in \{0.3,\dots,0.8\}$, $E_0 \in \{10,20,40\}$ (15 settings, 19 candidates). **9 of 19 verdicts are constant-independent.** Every $\Delta\text{Coh} = 0$ candidate rejects under all 15 settings. Only marginal candidates ($\Delta\text{Coh} = 1$ at $\lvert\Delta\rvert \approx 1$ KB) flip. B7''s discriminating power therefore comes from the counted numerator (R5's repair), not from constant calibration --- which downgrades 10.2 #4 from a correctness risk to a tuning preference. B7' itself fails at $\theta = 0.8$. |
+
+#### Ledger (run 002)
+
+$E = 19.0$ KB at entry; multiplier $1.95$.
+
+| Item | $\lvert\Delta\rvert$ | $\Delta$Coh | Ratio | Verdict |
+| --- | --- | --- | --- | --- |
+| B7' bootstrap exception + findings cap | 0.7 | 3 | 2.20 | **COMMIT** |
+| Defect register (`DEFECT_REGISTER.md`) | 1.0 | --- | --- | **ADMIT** (bootstrap exception, 1 of 1) |
+| R9--R12 findings | 0 | --- | --- | exempt (2.4 KB, within 4.0 KB cap) |
+| `COMPRESS` on `uil_vocab` | 1.3 | 0 | 0.00 | **REJECT** (R10) |
+| Vocab core/on-demand split | --- | --- | --- | relocated to dictionary manifest, host-side |
+
+$E$ after run 002: $19.0 + 0.7 + 1.0 = 20.7$ KB.
+
+**Concession.** Run 001 dismissed G6 as relabeling. That was wrong: executing the replay was new work and produced R12, which is the most consequential finding of this pass. Recorded rather than silently corrected.
 
 
 ---
