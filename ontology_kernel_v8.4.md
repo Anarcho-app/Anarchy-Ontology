@@ -406,7 +406,11 @@ Integer-valued and auditable against the logged open-questions list (§10). A de
 
 Constants are stipulative but are stipulated over counted quantities, making them falsifiable by replay: recompute the ledger with different constants and observe which historical deltas flip.
 
-**Bootstrap exception.** An instrument required to compute B7''s own terms cannot be scored by B7', since its `defects repaired` count is unavailable until the instrument exists. Such instruments are admitted by declared exception, capped at **one per revision**, logged in the ledger with the circularity stated. This closes an otherwise permanent block on the defect register.
+**Bootstrap exception.** An instrument required to compute B7''s own terms cannot be scored by B7', since its counts are unavailable until the instrument exists. Such instruments are admitted by declared exception, capped at **one per revision**, logged with the circularity stated.
+
+*Operational criterion.* An instrument qualifies iff it (i) makes a term of B7' countable that is not otherwise countable, and (ii) is a **register** --- a passive ledger of facts that already obtain --- introducing no operator, axiom, gate, or capability. A candidate that adds mechanism is an expansion and is scored normally, however it is described.
+
+*Deferral, not waiver.* An instrument admitted by exception is scored normally at the next revision, once its own terms are countable. If it then fails, it is removed. The exception defers the test; it does not exempt from it.
 
 **Findings cap.** Findings, logged open questions, and Trace entries contribute $0$ to $|\Delta|$, but the findings log is capped at **4.0 KB per revision**. Content beyond the cap is reclassified as expansion and scored normally. Without a cap the exemption is an unbounded bypass: any expansion can be relabeled a finding. Two independent model instances reached for this bypass within one pass each (§10.4, R9).
 
@@ -791,7 +795,8 @@ Findings are not expansions and contribute $0$ to $|\Delta|$ under B7'. They are
 7. `uil_vocab` at ~120 KB is itself a major consumer of the context budget §9 exists to conserve.
 8. Selection effect: **reduced, not closed** by run 002. Two passes now exist, both by model instances. Their convergent failure (R9) is evidence of correlated rather than independent sampling, so the effective broadening is less than the count suggests. A non-model pass remains unperformed.
 9. Capability-bearing vocabulary is excluded from `COMPRESS` (R10); no alternative context-budget mechanism yet exists for `uil_vocab`.
-10. The bootstrap exception (5.2) is capped at one per revision but is not otherwise constrained; what qualifies as an instrument of B7' is undefined.
+10. ~~Bootstrap exception unconstrained.~~ **Closed run 003** --- register/mechanism criterion plus deferral clause (5.2).
+11. Whether the cyclic branch of R13 is implementable without tripping B6 cycle detection at $L_{\max}$; attestation cycles are intended, operator cycles are not, and the two are not currently distinguished.
 
 ### 10.3 Rejected in run 001
 
@@ -848,6 +853,34 @@ $E = 19.0$ KB at entry; multiplier $1.95$.
 
 $E$ after run 002: $19.0 + 0.7 + 1.0 = 20.7$ KB.
 
+### 10.5 Run 003 --- Third Pass (editorial + structural)
+
+| # | $T$ (run 003) | Disposition |
+| --- | --- | --- |
+| E1 | Footer still reads "residue of run 001" | **Accepted**, corrected below. |
+| E2 | Bootstrap exception under-specified; a one-line criterion would close open #10 at near-zero cost | **Accepted and tightened.** The proposed criterion ("instrument that makes a B7' term countable") is necessary but not sufficient --- it would admit any expansion claiming to make $\Delta$Coh countable. Committed with a register/mechanism distinction and a deferral clause (5.2). Closes open #10. |
+| E3 | R10 + R11 together suggest that hardening attestation or security concentrates authority; treat as a structural attractor rather than an accident | **Strengthened to a theorem branch.** See R13. The claim is true but under-stated: it is not a tendency, it is one of exactly two outcomes the Circularity Theorem already forces. |
+| E4 | Selection-effect residual correctly left open; two correlated passes are not independent sampling | **Concurrence.** No change; open #8 stands as reduced-not-closed. |
+
+#### Findings (run 003)
+
+| # | Finding |
+| --- | --- |
+| R13 | **Attestation Corollary.** Verification imposes a directive the verified party cannot unilaterally refuse, and therefore *is* an edge of $R$ under the §2 edge rule. A total verification regime over finite $S$ therefore has a verifier chain that must either terminate or close. By the Circularity Theorem the outcome is binary: either the chain terminates in an unverified verifier --- an **apex**, $\rho_M > 0$ --- or it closes into a cycle of mutual verification --- $\rho_M = 0$. There is no third option and no unconcentrated acyclic verification regime. Concentration under hardening is thus not an accident and not inevitable; it is the terminating branch, selected by default whenever the top verifier is left unverified. Computed for the current graph: leaving the host unattested gives $\rho_A = \rho_M = 0.20$ (R11); admitting either $(\mathrm{host}, ev)$ or $(\mathrm{host}, h)$ gives $\rho_A = \rho_M = 0$ at $\beta = 1.60$, $\sigma = 2.67$. This is R2 recovered at the attestation layer: mutual accountability is the cycle. Promotable to §2 as a companion to the Overlap Aggregation Corollary if it survives a further pass. Logged without verdict (B4): the cyclic branch also drives $\rho_A$ to 0. |
+
+#### Ledger (run 003)
+
+$E = 20.7$ KB at entry; multiplier $2.035$; max $\lvert\Delta\rvert$ at $\Delta\text{Coh} = 1$ is $0.98$ KB.
+
+| Item | $\lvert\Delta\rvert$ | $\Delta$Coh | Ratio | Verdict |
+| --- | --- | --- | --- | --- |
+| Bootstrap operational criterion | 0.5 | 1 | 0.98 | **COMMIT** |
+| Footer correction | 0 | --- | --- | editorial |
+| R13 Attestation Corollary | 0 | --- | --- | exempt (0.9 KB, within 4.0 KB cap) |
+| Audit edge $(\mathrm{host}, ev)$ as committed mechanism | --- | --- | --- | **not proposed** --- R13 characterizes the choice; implementing it is a mechanism and must be scored on its own |
+
+$E$ after run 003: $21.2$ KB.
+
 **Concession.** Run 001 dismissed G6 as relabeling. That was wrong: executing the replay was new work and produced R12, which is the most consequential finding of this pass. Recorded rather than silently corrected.
 
 
@@ -857,4 +890,4 @@ $E$ after run 002: $19.0 + 0.7 + 1.0 = 20.7$ KB.
 
 *Formatting: Highest GitHub Flavored Markdown (GFM) compatibility --- ATX headers only, native pipe tables, fenced code blocks, display math with $$ on their own lines, ASCII punctuation preferred, no HTML, append-only Trace discipline preserved.*
 
-*This revision (v8.4) is the residue of Pan-Thesis run 001 applied to v8.3. Ten of sixteen candidates passed B7'; six were rejected and are logged in 10.3. Committed mass 9.0 KB (+23% of kernel); the unbundled patch from which these were drawn measured 29.4 KB (+77%) and is itself rejected under the guard this revision installs. Core mutation: B7 superseded by B7' under explicit amendability (B5 protects B1--B4 only). T1--T5, the Anarchy-Ontology core definitions, Pan-Thesis I--X, Inference gates 01--12, and B1--B6 are unmodified. Residual flagged throughout and not discharged.*
+*This revision (v8.4) is the residue of Pan-Thesis runs 001--003 applied to v8.3. Ten of sixteen candidates passed B7'; six were rejected and are logged in 10.3. Committed mass 9.0 KB (+23% of kernel); the unbundled patch from which these were drawn measured 29.4 KB (+77%) and is itself rejected under the guard this revision installs. Core mutation: B7 superseded by B7' under explicit amendability (B5 protects B1--B4 only). T1--T5, the Anarchy-Ontology core definitions, Pan-Thesis I--X, Inference gates 01--12, and B1--B6 are unmodified. Runs 002--003 were independent passes by a second model instance; their convergent failure modes are recorded as R9. $E = 21.2$ KB. Residual flagged throughout and not discharged.*
