@@ -4,7 +4,7 @@
 
 Two layers. **Structural**: facts about $R$. **Ascriptive**: facts about what subjects call themselves and what interpreters read in them. No theorem crosses between them.
 
-**$-y$ vs. $-ism$.** *Anarchy* ($-ia$, a state) is structural: a fact about $R$, indexed by domain. *Anarchism* ($-ism$, a doctrine) is ascriptive: an attitude toward a target $R^{*}$, indexed by interpreter. Neither entails the other in either direction. Most disputes in this area are a confusion of the two, or a suppressed index on one of them.
+**$-y$ vs. $-ism$.** *Anarchy* ($-ia$, a state) is structural: a fact about $R$, indexed by domain. *Anarchism* ($-ism$, a doctrine) is ascriptive: an attitude toward a target $R^{\ast}$, indexed by interpreter. Neither entails the other in either direction. Most disputes in this area are a confusion of the two, or a suppressed index on one of them.
 
 ---
 
@@ -130,17 +130,19 @@ $$
 L(x)\iff x\text{ self-identifies as an anarchist}
 $$
 $$
-I^{k}_{j}(x)\iff\text{interpreter }j\text{ reads }x\text{ as advocating a target }R^{*}\text{ with property }k
+I^{k}_{j}(x)\iff\text{interpreter }j\text{ reads }x\text{ as advocating a target }R^{\ast}\text{ with property }k
 $$
 $L$ is self-ascribed and near-checkable. $I$ requires an ascriber, so it carries the interpreter index $j$ and the target-property index $k$. Dropping either is the commonest error: "was $x$ an anarchist?" is ill-formed until both are fixed.
 
 ## The advocacy types are not free — the structural layer supplies them
 $$
-\begin{aligned}
-I^{1} &:\ \rho_A(R^{\ast})\uparrow \\
-I^{2} &:\ \rho_M(R^{\ast})=0 \\
-I^{3}_{D} &:\ R^{\ast}{\upharpoonright}D=\varnothing
-\end{aligned}
+I^{1}:\ \rho_A(R^{\ast})\uparrow
+$$
+$$
+I^{2}:\ \rho_M(R^{\ast})=0
+$$
+$$
+I^{3}_{D}:\ R^{\ast}{\upharpoonright}D=\varnothing
 $$
 - $I^{1}$ **individualist** — maximize personal un-ruledness. Voluntarist and Stirnerite formulations.
 - $I^{2}$ **acephalous** — abolish the apex; accountability closes into cycles. Proudhon, Kropotkin, "abolition of the state", "rejection of coercive hierarchy".
@@ -209,17 +211,40 @@ Under the reading that resolves both, the corpus is **not** $I^{2}$: it is anti-
 
 ## The crux is one node's sort
 
-$\rho^{H}_{A}=1$ requires $t\in T$. If the referent of "one is your Master" is assigned to $H$, then $R{\upharpoonright}H\neq\varnothing$, $\rho^{H}_{A}$ falls, and the claim collapses into ordinary hierarchy. The entire structural reading of the corpus as sortal anarchy turns on a single sort assignment that the text itself does not decide for us. The formalism does not settle the christological question; it shows exactly where that question sits and why the anarchy claim is sensitive to it.
+$\rho^{H}_{A}=1$ requires $t\in T$. If the referent of "one is your Master" is assigned to $H$, then $R{\upharpoonright}H\neq\varnothing$, $\rho^{H}_{A}$ falls from $1$ to $1/|H|$, and $\rho^{H}_{M}$ rises from $0$ to $1/|H|$ — a human apex.
+
+> **The entire anarchism reading turns on the sort assignment of a single node, and that assignment is a doctrinal commitment the formalism cannot supply.**
+
+This is the honest terminus. Tolstoy and Ellul assign $T$ and read $I^{3}_{H}$; readers who assign $H$ read a monarchy. Both are reasoning correctly from their premise. John 10:34 ("ye are gods") is notable here as the one text that would *dissolve* the partition rather than shift one node across it — with the caveat that its source, Psalm 82, addresses unjust judges under condemnation, and its Johannine function is christological.
 
 ## Ascriptive reading
+- $L=\bot$, trivially: the term postdates the subject by eighteen centuries. **Nothing follows from this**, in either direction.
+- $I^{3}_{H,j}$ varies with $j$: positive for Tolstoy, Ellul, and the Christian-anarchist tradition; negative for readers assigning the Master-node to $H$, and for readers who take Matt 23:8-10 as a $\mathrm{Ttl}$-constraint.
+- $I^{2}_{j}$: negative on the resolving reading above, for any $j$ who counts Matt 28:18 and Matt 18:15-18.
 
-$L=\bot$ (the word is 19th-century). The interesting question is $I$. The three advocacy types give three different answers, each with its own index:
+Three coordinates, three different answers, no contradiction.
 
-- $I^{1}$ (individualist): thin. The corpus contains personal un-ruledness language, but the dominant ethical thrust is not maximization of $\rho_A$.
-- $I^{2}$ (acephalous): fails on the structural reading above. The text retains edges and apex language once the sort is fixed.
-- $I^{3}_{D}$ (horizontal/sortal): the strongest fit. Communal ($C$) and sortal ($H$) readings are both present; the "among you" scope and the heaven/earth partition are explicit.
+## On the Bayesian calculation
 
-A defensible version puts apocalypticism in the hypothesis space, clusters correlated pericopes, selects passages adversarially, runs sensitivity analysis, states $\kappa$ as one of $I^{1}/I^{2}/I^{3}_{D}$, and reports the output as $I^{k}_{j}$ — an interpreter's reading with its indices visible. It will not return a number with eleven significant figures, and the honest finding is that the corpus supports $I^{3}_{D}$ far better than $I^{2}$, conditional on a sort assignment it cannot itself justify.
+The likelihood-ratio computation returning $677{,}376:1$, and its extension to $\approx3.7\times10^{12}:1$, is not a structural result. It is $I_{j}$ for one $j$, with the index suppressed and a decimal expansion attached. Six defects, in order of severity:
+
+**1. Independence fails.** Multiplying LRs requires conditional independence given the hypothesis. Matt 23:8-10 and 23:11-12 are adjacent verses in one discourse; Matt 23:11 and Mark 10:42-45 are one tradition in two recensions; Luke 17:21 and John 18:36 are one theme. These are not eight witnesses but roughly six clusters counted eight times. Taking the maximum LR per cluster instead of the product:
+$$
+8\times8\times6\times9\times5\times0.8=13{,}824\quad\text{not}\quad677{,}376
+$$
+a factor of 49 lost to double-counting alone.
+
+**2. The hypothesis space omits the majority scholarly position.** Odds-form updating requires $P(H_a)+P(H_0)=1$. The live options include apocalyptic eschatology (Schweitzer, Ehrman), theocratic messianism, Jewish reform, and quietism. "My kingdom is not of this world" is at least as well explained by apocalypticism as by anarchism — it is evidence against *Zealot revolt*, which is not evidence for anarchism. With the true hypothesis outside the partition, the posterior is uninterpretable.
+
+**3. The sample is selected on the conclusion.** Updating on a filtered corpus is invalid without modeling the filter. The "adding all his words leaves it unchanged, most are LR≈1" step is where this bites: the omitted counter-evidence is not neutral. Matt 23:2-3, Matt 19:28, Matt 18:15-18, Matt 28:18 all carry LR $<1$ and none appears. Assigning them by the same free-hand method used for the originals — say $0.2,\,0.25,\,0.3,\,0.2$ — gives $13{,}824\times0.003\approx41:1$. The result has moved four orders of magnitude on choices no less defensible than the originals.
+
+**4. The LRs are outputs, not inputs.** The "Why this LR?" column justifies a *direction*; the magnitudes (6, 8, 7, 9) are free parameters fixed after the conclusion. Nothing constrains 9 rather than 2. The magnitudes are the result.
+
+**5. $H_a$ bundles separable claims.** As defined it mixes $I^{1}$, $I^{2}$, $I^{3}$, non-violence, and interiority. Evidence for non-resistance is not evidence for apexlessness: a pacifist theocracy satisfies the first and violates the second. Matt 5:38-44 (LR 9, the single heaviest weight) bears on non-violence and is close to silent on $\rho_M$.
+
+**6. The conclusion equivocates $-y$ and $-ism$.** "Jesus' ideology was anarchism" is an $I$-claim; the verses cited about the kingdom's nature are read as $-y$-claims about $R$. The argument slides between them.
+
+**What survives.** A defensible version puts apocalypticism in the hypothesis space, clusters correlated pericopes, selects passages adversarially, runs sensitivity analysis, states $\kappa$ as one of $I^{1}/I^{2}/I^{3}_{D}$, and reports the output as $I^{k}_{j}$ — an interpreter's reading with its indices visible. It will not return a number with eleven significant figures, and the honest finding is that the corpus supports $I^{3}_{D}$ far better than $I^{2}$, conditional on a sort assignment it cannot itself justify.
 
 ---
 
