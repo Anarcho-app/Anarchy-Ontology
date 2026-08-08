@@ -12,17 +12,17 @@ Two layers. **Structural**: facts about $R$. **Ascriptive**: facts about what su
 
 ## Core
 $$
-\operatorname{An}_R(x)\;\iff\;\neg\exists y\,(y\neq x\land x\,R\,y)
+\mathrm{An}_R(x)\;\iff\;\neg\exists y\,(y\neq x\land x\,R\,y)
 $$
 $R$ = ruled-by relation, $x\,R\,y$ = "$x$ is ruled by $y$"; irreflexive; $S$ finite.
 $$
-A_R=\{x\in S\mid\operatorname{An}_R(x)\},\qquad A_R=A_{R^{+}}
+A_R=\{x\in S\mid\mathrm{An}_R(x)\},\qquad A_R=A_{R^{+}}
 $$
-The $y\neq x$ clause: self-rule is not being ruled. *Auto-nomos* is compatible with $\operatorname{An}_R$.
+The $y\neq x$ clause: self-rule is not being ruled. *Auto-nomos* is compatible with $\mathrm{An}_R$.
 
 ## Two predicates, one signature
 $$
-\text{an-archy}_1(x):=\operatorname{An}_R(x)\qquad\text{local, unary — a subject with no ruler}
+\text{an-archy}_1(x):=\mathrm{An}_R(x)\qquad\text{local, unary — a subject with no ruler}
 $$
 $$
 \text{An-archy}_2(S,R):=(\rho_M=0)\qquad\text{systemic, shape-defined — rule exists, no ruler is un-ruled}
@@ -30,7 +30,7 @@ $$
 
 ## Apex vs. hermit
 $$
-\text{apex: }\operatorname{An}_R(x)\land\exists z\,(z\,R\,x)\qquad\text{hermit: }\operatorname{An}_R(x)\land\neg\exists z\,(z\,R\,x)
+\text{apex: }\mathrm{An}_R(x)\land\exists z\,(z\,R\,x)\qquad\text{hermit: }\mathrm{An}_R(x)\land\neg\exists z\,(z\,R\,x)
 $$
 $A_R^{\mathrm{apex}}=\{x\in A_R\mid\exists z\,(z\,R\,x)\}$. Kings answerable to none vs. the ungoverned isolate.
 
@@ -40,10 +40,10 @@ Every anarchy claim carries **two indices**: which relation, and over which subd
 **Relation domain.** $R_d$ for $d\in\{\text{legal},\text{economic},\text{religious},\dots\}$.
 **Node subdomain.** For $D\subseteq S$, the restriction $R{\upharpoonright}D=R\cap(D\times D)$, and
 $$
-\operatorname{An}^{D}_{R}(x)\iff x\in D\land\neg\exists y\in D\,(y\neq x\land x\,R\,y)
+\mathrm{An}^{D}_{R}(x)\iff x\in D\land\neg\exists y\in D\,(y\neq x\land x\,R\,y)
 $$
 $$
-A^{D}_{R}=\{x\in D\mid\operatorname{An}^{D}_R(x)\},\qquad
+A^{D}_{R}=\{x\in D\mid\mathrm{An}^{D}_R(x)\},\qquad
 \rho^{D}_{A}=\frac{|A^{D}_{R}|}{|D|},\qquad
 \rho^{D}_{M}=\frac{|A^{D,\mathrm{apex}}_{R}|}{|D|}
 $$
@@ -174,9 +174,9 @@ $\rho_{I^k}$ determines nothing about $\rho_M$ or $\rho^{D}_{A}$. A population w
 ## Titles are not edges
 A third ascriptive object, distinct from both $L$ and $R$:
 $$
-\operatorname{Ttl}(x,\tau)\iff x\text{ bears honorific }\tau
+\mathrm{Ttl}(x,\tau)\iff x\text{ bears honorific }\tau
 $$
-Abolishing $\operatorname{Ttl}$ does not delete any edge of $R$. A rule "let no one be *called* master" constrains the honorific relation; the ruled-by relation is untouched, and $\rho_A,\rho_M,\rho^D_A$ are unchanged. Conversely an untitled office can hold every edge it held before.
+Abolishing $\mathrm{Ttl}$ does not delete any edge of $R$. A rule "let no one be *called* master" constrains the honorific relation; the ruled-by relation is untouched, and $\rho_A,\rho_M,\rho^D_A$ are unchanged. Conversely an untitled office can hold every edge it held before.
 
 **This is the single most common source of false anarchy readings.** Anti-honorific texts are read as anti-authority texts. Formally they operate on different objects, and a corpus can abolish titles while retaining sanctions with no inconsistency whatever.
 
@@ -190,7 +190,7 @@ A test case exercising every index at once. The formalism does not settle any do
 
 ## Structural reading, by domain
 
-**$R_{\text{political}}$.** $\operatorname{An}(x)=\bot$. A Roman prefect could impose a non-refusable sanction and demonstrably did. "Political hermit" fails the edge rule.
+**$R_{\text{political}}$.** $\mathrm{An}(x)=\bot$. A Roman prefect could impose a non-refusable sanction and demonstrably did. "Political hermit" fails the edge rule.
 
 **$R_{\text{religious}}$, unsorted.** Matt 28:18 ("all authority is given unto me") is a maximal apex claim; Matt 19:28 assigns thrones; Matt 18:15-18 specifies a sanction procedure ending in expulsion, which is an edge with declared enforcement. $\rho_M>0$, decisively. Not $\text{An-archy}_2$.
 
@@ -200,7 +200,7 @@ A test case exercising every index at once. The formalism does not settle any do
 
 ## Two internal tensions the formalism exposes
 
-1. **Matt 23:2-3 vs. Matt 23:8-10**, same discourse. "The scribes and Pharisees sit in Moses' seat; whatsoever they bid you observe, that observe and do" *retains* a human-to-human edge with directive force. Ten verses later, human titles are barred. Both hold only if 23:8-10 operates on $\operatorname{Ttl}$ and not on $R$ — titles abolished, edges retained.
+1. **Matt 23:2-3 vs. Matt 23:8-10**, same discourse. "The scribes and Pharisees sit in Moses' seat; whatsoever they bid you observe, that observe and do" *retains* a human-to-human edge with directive force. Ten verses later, human titles are barred. Both hold only if 23:8-10 operates on $\mathrm{Ttl}$ and not on $R$ — titles abolished, edges retained.
 2. **Mark 10:42-45 vs. Matt 18:15-18.** Lordship is barred within $C$; a binding expulsion procedure is specified within $C$. Both hold only if 10:42-45 constrains conduct along edges rather than their existence — servant-inversion, not deletion.
 
 Under the reading that resolves both, the corpus is **not** $I^{2}$: it is anti-honorific and anti-domineering while retaining sanction. That is a coherent and well-attested position, and it is not apexlessness.
@@ -234,7 +234,7 @@ Well-formed reading: a trajectory $(\rho_A(t),\rho_M(t))$ between $\rho_M=0$ and
 *Widely attributed, but only through quotation collections, wording unstable ("perennially" / "perpetually"), no primary source located. Used unattributed, as illustration only. Contrast the Zinn line, which has an interview of record.*
 
 ## Closure
-**Structural signature:** $R_d$; the local predicate $\operatorname{An}$; the set-former $A$; restriction ${\upharpoonright}D$; cardinal counting terms; edge add/delete. Every claim indexed by $(d,D)$.
-**Ascriptive signature:** the unary predicates $L$, $I^{k}_{j}$, $\operatorname{Ttl}$, their extensions and ratios. These attach to subjects, never to edges.
+**Structural signature:** $R_d$; the local predicate $\mathrm{An}$; the set-former $A$; restriction ${\upharpoonright}D$; cardinal counting terms; edge add/delete. Every claim indexed by $(d,D)$.
+**Ascriptive signature:** the unary predicates $L$, $I^{k}_{j}$, $\mathrm{Ttl}$, their extensions and ratios. These attach to subjects, never to edges.
 
-$\text{an-archy}_1$ is exhausted by $\operatorname{An}_R,A_R,\rho_A$ and edge operations; $\text{An-archy}_2$ by $\rho_M$; horizontal anarchy by $\rho^{D}_{A}$. Nothing aggregates the first into the second, horizontal anarchy implies neither, and nothing bridges the ascriptive layer to any of them.
+$\text{an-archy}_1$ is exhausted by $\mathrm{An}_R,A_R,\rho_A$ and edge operations; $\text{An-archy}_2$ by $\rho_M$; horizontal anarchy by $\rho^{D}_{A}$. Nothing aggregates the first into the second, horizontal anarchy implies neither, and nothing bridges the ascriptive layer to any of them.
