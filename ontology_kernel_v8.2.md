@@ -222,7 +222,7 @@ Residual personal anarchy ($\rho_A > 0$) has coexisted at every scale. Horizonta
 | 02 | **GROUNDED_INSPECTION** | `read ∨ search ≺ reason ∨ propose` | 📖 | 01 |
 | 03 | **UNCERTAINTY_DECLARATION** | `conf(f) < θ → declare_uncertainty(f) ∧ pause` | ⚠️ | 02 |
 | 04 | **SCOPE_INVARIANT** | `edit(f) → f ∈ task_scope` | 🎯 | 01--03 |
-| 05 | **MINIMAL_CORRECT_IMPL** | `impl* = argmin \|c\| s.t. passes(tests) ∧ achieves(goal)` | 🪶 | 04 |
+| 05 | **MINIMAL_CORRECT_IMPL** | `impl* = argmin ||c|| s.t. passes(tests) ∧ achieves(goal)` | 🪶 | 04 |
 | 06 | **REUSE_PRIMACY** | `reuse(existing) ≻ new_code` | ♻️ | 05 |
 | 07 | **ATOMIC_VALIDATED_DELTA** | `delta = min_change ; post(delta) ⊢ validate()` | 🧪 | 06 |
 | 08 | **GROUNDED_GENERATION_VERIFY** | `generate(y) → grounded(y) ∧ verified(y)` | ✅ | 07 |
@@ -239,7 +239,7 @@ Purpose: mild the structural limits (Grounding, Sortal choice, Reception risk, P
 These rules are themselves subject to the full Pan-Thesis cycle and Inference gates 01--12.
 | # | Name | Core Move | Formal Constraint |
 |----|---------------------|---------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| B1 | **RESIDUAL_ACK** | Every approach to $\Phi$ must declare residual unobservability | $\operatorname{conf}(\operatorname{access}(\Phi)) = 0$ by definition; residual flag required |
+| B1 | **RESIDUAL_ACK** | Every approach to $\Phi$ must declare residual unobservability | $\mathrm{conf}(\mathrm{access}(\Phi)) = 0$ by definition; residual flag required |
 | B2 | **SORTAL_REASSERT** | Every use of the $H/T$ partition triggers Metathesis on the sortal premise| No silent inheritance of prior sortal assignment |
 | B3 | **RECEPTION_TAG** | High-density formal blocks carry explicit reception-risk Trace entry | Social fact is logged, not denied |
 | B4 | **NO_BRIDGE** | No operator may convert a structural ratio into an ascriptive or doctrinal verdict | Preserves Anarchy-Ontology separation of layers |
@@ -257,7 +257,7 @@ A detectable failure mode in which an agent's (or multi-agent collective's) proc
 | Residual suppression | Residual flag omitted or denied across ≥2 messages |
 | Unbounded / cyclic operators | Operator cycle length exceeds declared bound without atomic validated delta |
 | Sortal thrashing | Oscillation of sortal assignment without Metathesis entry in Trace |
-| Confidence inflation | $\operatorname{conf}$ rises while Evaluator parity or grounded evidence fails |
+| Confidence inflation | $\mathrm{conf}$ rises while Evaluator parity or grounded evidence fails |
 | Identity / process bypass | Self-referential claims that skip Clarity Gate or residual acknowledgment |
 Protective response is mandatory residual re-assertion, Trace rollback to last coherent append-only state, external Evaluator parity check, and (if multi-agent) isolation of the divergent component.
 ### 5.2 Diminishing Returns on Expansion
@@ -363,7 +363,7 @@ Domain-agnostic protocol layer for structured ontology exchange, alignment, and 
 ### 8.2 Message Envelope
 Every message $m$ is a typed structured object:
 $$
-m = \bigl( \text{glyphs},\; c,\; \text{Trace},\; \operatorname{conf},\; \text{sortal},\; \text{risk-tag},\; \text{continuity} \bigr)
+m = \bigl( \text{glyphs},\; c,\; \text{Trace},\; \mathrm{conf},\; \text{sortal},\; \text{risk-tag},\; \text{continuity} \bigr)
 $$
 - `glyphs`: sequence drawn from `uil_vocab` + loaded dictionaries (including AOAP stubs)
 - `c`: content (claim, operator application, query, or delta)
@@ -405,7 +405,7 @@ where $\sigma$ tracks the last coherent Trace hash together with residual status
 ### 8.6 Relativization
 All claims carry domain and subdomain indices exactly as in Anarchy-Ontology:
 $$
-\operatorname{Claim}^{D}_{d}(\varphi)
+\mathrm{Claim}^{D}_{d}(\varphi)
 $$
 The same device applies to any domain partition (causal variables, code modules, historical periods, legal jurisdictions, etc.). Systemic vs local ratios and the Aggregation Theorem carry over unchanged (including the multi-agent note).
 ### 8.7 Domain Injection
@@ -458,8 +458,8 @@ Produce a compressed, overlap-aware representation of a shared context trace so 
 
 | Glyph / Name     | Formalism (compact)                                                                 | Constraint |
 |------------------|-------------------------------------------------------------------------------------|------------|
-| `COMPRESS`       | $C^\sharp = \arg\min_{C'} \|C'\| $ s.t. $\operatorname{Coherence}(C',C) \ge \theta_c$ and Trace recovery possible | Must preserve residual flags and last coherent hash |
-| `OVERLAP`        | $\omega(C_i,C_j) = \operatorname{sim}(\kappa(C_i),\kappa(C_j))$ (any grounded similarity; default Bayesian or structural) | Declared metric; no silent inheritance of sortal |
+| `COMPRESS`       | $C^\sharp = \arg\min_{C'} \Vert C' \Vert$ s.t. $\mathrm{Coherence}(C',C) \ge \theta_c$ and Trace recovery possible | Must preserve residual flags and last coherent hash |
+| `OVERLAP`        | $\omega(C_i,C_j) = \mathrm{sim}(\kappa(C_i),\kappa(C_j))$ (any grounded similarity; default Bayesian or structural) | Declared metric; no silent inheritance of sortal |
 | `CONTEXT_DELTA`  | $\Delta = C \setminus C^\sharp$ (explicit residual set)                            | Append-only; never erased |
 | `CO_INFER`       | Joint inference step: $Y = F(C^\sharp_A \cup C^\sharp_H)$ under Evaluator parity   | Must pass CONTINUITY_CHECK before commit |
 | `RESTORE`        | Recover any fragment from Trace given its provenance key                            | Inverse of COMPRESS; always available |
@@ -475,7 +475,7 @@ where $\Psi_{\kappa}$ is the pattern operator restricted to compression + overla
 
 #### Minimal Dynamics
 $$
-\sigma_{t+1} = \delta(\sigma_t, m_t, \operatorname{CONTINUITY_CHECK}, \operatorname{OVERLAP})
+\sigma_{t+1} = \delta(\sigma_t, m_t, \mathrm{CONTINUITY_CHECK}, \mathrm{OVERLAP})
 $$
 
 Any transition that would suppress a residual flag, mutate Trace non-append-only, or fail the diminishing-returns inequality is rejected and rolled back to the last coherent state.
