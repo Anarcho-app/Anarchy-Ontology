@@ -26,7 +26,7 @@ Let $\Omega$ be any state that is a stable attractor of the dynamics in the weak
 The three modes jointly exhaust the substance:
 
 $$
-V \ni \text{Energy} \;=\; \operatorname{span}\{\Phi\} \;+\; \operatorname{flows\ of\ }H \;+\; \operatorname{attractors\ }\Omega
+V \ni \text{Energy} \;=\; \mathrm{span}\{\Phi\} \;+\; \text{flows of } H \;+\; \text{attractors } \Omega
 $$
 
 No additional independent substance exists.
@@ -550,10 +550,10 @@ Failure at any step triggers rollback to last coherent append-only state and log
 Alignment sessions are governed by a simple state transition:
 
 $$
-\sigma_{t+1} = \delta(\sigma_t, m_t, \text{CONTINUITY_CHECK})
+\sigma_{t+1} = \delta(\sigma_t,\, m_t,\, C_{\mathrm{check}})
 $$
 
-where $\sigma$ tracks the last coherent Trace hash together with residual status. Any transition that fails CONTINUITY_CHECK (or violates B7 when an expansion is proposed) rolls back to $\sigma_t$. This is the smallest dynamical sketch that makes the protocol executable rather than purely declarative. Full process-flow dynamics under $\Lambda_t$ remain open.
+where $C_{\mathrm{check}}$ stands for `CONTINUITY_CHECK`, and $\sigma$ tracks the last coherent Trace hash together with residual status. Any transition that fails CONTINUITY_CHECK (or violates B7 when an expansion is proposed) rolls back to $\sigma_t$. This is the smallest dynamical sketch that makes the protocol executable rather than purely declarative. Full process-flow dynamics under $\Lambda_t$ remain open.
 
 ### 8.6 Relativization
 
