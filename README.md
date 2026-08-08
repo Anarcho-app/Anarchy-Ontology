@@ -106,12 +106,12 @@ $\rho_M=0$ iff **every ruler is ruled**.
 ## Instantiation
 **Edge rule.** $x\,R\,y$ iff $y$ can impose on $x$ a directive $x$ cannot unilaterally refuse without sanction, and $y$ is an identifiable person, office, or (under a declared sortal extension) transcendent node. Nodes are offices, not persons, above household scale. Fix one $R_d$ per pass.
 
-| Case | $|S|$ | $|R|$ | $\rho_A$ | $\rho_M$ | $\beta$ | $\sigma$ | $\rho_{\mathrm{rul}}$ |
-|---|---|---|---|---|---|---|---|
+| Case | $\lvert S\rvert$ | $\lvert R\rvert$ | $\rho_A$ | $\rho_M$ | $\beta$ | $\sigma$ | $\rho_{\mathrm{rul}}$ |
+|:-----|:-----------------:|:-----------------:|:--------:|:--------:|:-------:|:-------:|:-----------------:|
 | Household (2 parents, 2 children) | 4 | 4 | 0.50 | 0.50 | 1.00 | 2.00 | 0.50 |
 | Monarchy (king, 2 nobles, 2 peasants) | 5 | 4 | 0.20 | 0.20 | 0.80 | 1.33 | 0.60 |
 | Constitutional republic (electorate, legislature, executive, court, bureau) | 5 | 11 | 0.00 | 0.00 | 2.20 | 2.75 | 0.80 |
-| Sortal star ($t\in T$; 3 humans, none ruling another) | 4 | 3 | 0.25 | 0.25 | 0.75 | 3.00 | 0.25 |
+| Sortal star ($t \in T$; 3 humans) | 4 | 3 | 0.25 | 0.25 | 0.75 | 3.00 | 0.25 |
 
 Republic edges: electorate ruled by legislature and court; legislature by electorate and court; executive by all three; court by executive and legislature; bureau by executive and legislature. $A_R=\varnothing$.
 Sortal star, restricted: $\rho^{H}_{A}=1$, $\rho^{H}_{M}=0$, $R{\upharpoonright}H=\varnothing$. Unrestricted it is a star — the same shape as the monarchy row.
@@ -136,9 +136,11 @@ $L$ is self-ascribed and near-checkable. $I$ requires an ascriber, so it carries
 
 ## The advocacy types are not free — the structural layer supplies them
 $$
-I^{1}:\ \rho_A(R^{*})\uparrow\qquad
-I^{2}:\ \rho_M(R^{*})=0\qquad
-I^{3}_{D}:\ R^{*}{\upharpoonright}D=\varnothing
+\begin{aligned}
+I^{1} &:\ \rho_A(R^{\ast})\uparrow \\
+I^{2} &:\ \rho_M(R^{\ast})=0 \\
+I^{3}_{D} &:\ R^{\ast}{\upharpoonright}D=\varnothing
+\end{aligned}
 $$
 - $I^{1}$ **individualist** — maximize personal un-ruledness. Voluntarist and Stirnerite formulations.
 - $I^{2}$ **acephalous** — abolish the apex; accountability closes into cycles. Proudhon, Kropotkin, "abolition of the state", "rejection of coercive hierarchy".
