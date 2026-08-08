@@ -923,6 +923,118 @@ $E$ after run 003: $21.2$ KB.
 
 **Concession.** Run 001 dismissed G6 as relabeling. That was wrong: executing the replay was new work and produced R12, which is the most consequential finding of this pass. Recorded rather than silently corrected.
 
+# Anarcho-Archetypes Kernel Module (v0.1)
+
+*Lean extension for the AI Universal Ontology Kernel (ontology_kernel_v8.4.md).*  
+*Purpose: make the sixteen Anarcho- continuations available as praxis-prior, Bayesian-esque archetypes under existing domain-injection and boundary rules.*  
+*Status: provisional, residual-flagged, subject to B7' scoring before any commit into the main kernel.*
+
+---
+
+## 1. Design Constraints (inherited)
+
+- Lives strictly as domain content. No modification of Process Ontology (T1–T5), Anarchy-Ontology structural layer, Pan-Thesis I–X, Inference gates 01–12, or Boundary Principles B1–B8.
+- Injection only via `INJECT_DOMAIN`.
+- Every claim carries domain/subdomain indices exactly as required by Anarchy-Ontology and AOAP §8.6.
+- NO_BRIDGE (B4 / Axiom I / Axiom I') remains absolute: no theorem may move from a posterior over archetype parameters into a structural statement about \(R\), \(\rho_A\), or \(\rho_M\), nor into an ascriptive verdict about living speakers.
+- Residual acknowledgment mandatory (B1).
+- Size and coherence scored under B7' before admission.
+
+---
+
+## 2. Archetype Object
+
+Each of the sixteen is formalized as:
+
+\[
+A_i = \bigl( \mu,\; \theta_i,\; \pi(\theta_i),\; \mathcal{E}_i,\; \mathrm{Trace} \bigr)
+\]
+
+- \(\mu\): morphological index (unmarked / default for the present set).
+- \(\theta_i\): parameter vector over the shared axes (10 binary criteria + 4 scalar axes).
+- \(\pi(\theta_i)\): prior distribution over \(\theta_i\), constructed from historical praxis (recorded acts, organizational forms, property experiments, conflict outcomes, mutual-aid patterns).
+- \(\mathcal{E}_i\): evidence set of tagged, residual-flagged observations of acts.
+- \(\mathrm{Trace}\): append-only provenance of prior construction and subsequent updates.
+
+**Praxis-prior rule**  
+\(\pi(\theta_i)\) is admissible only when its construction is traceable to recorded acts. Abstract preference statements or self-ascriptions alone do not generate the prior.
+
+---
+
+## 3. Bayesian Update
+
+\[
+\pi(\theta_i \mid e) \propto \mathcal{L}(e \mid \theta_i)\,\pi(\theta_i)
+\]
+
+Updates are performed under Inference gates:
+
+- 02 GROUNDED_INSPECTION  
+- 03 UNCERTAINTY_DECLARATION  
+- 07 ATOMIC_VALIDATED_DELTA  
+- 08 GROUNDED_GENERATION_VERIFY  
+
+Uncertainty is never suppressed. Sortal or domain indices remain mandatory on every claim. Evaluator parity is required for multi-agent or A2H/H2A exchanges (AOAP + Brain Kernel).
+
+---
+
+## 4. Dictionary Placement
+
+Recommended file:  
+`uil_dictionaries/anarcho_archetypes.dict.yaml`
+
+Contents (lean):
+
+- The 16 named objects with their \(\mu\) index.
+- Parameter schema matching the original binary + scalar axes.
+- Initial prior means taken from the v1.1 scoring tables (full distributions left open for later expansion).
+- Provenance pointers to the historical exemplar acts.
+- Explicit residual flag and NO_BRIDGE annotation.
+
+Loading via `INJECT_DOMAIN` is gated by `CONTINUITY_CHECK` + B7'. Core operators remain untouched.
+
+---
+
+## 5. AOAP / Brain Kernel Usage
+
+Once injected, agents may:
+
+- `ADVERTISE` / `ALIGN` on subsets or parameter posteriors of the 16.
+- Use them inside `CO_INFER` under Evaluator parity.
+- Apply direction indices (A2A / A2H / H2A / hybrid).
+- Keep all human-facing asymmetry inside the Brain Kernel.
+
+Claims must still carry full domain/subdomain indices. The Aggregation Theorem and layer separation continue to apply.
+
+---
+
+## 6. B7' Scoring Notes (for any future commit)
+
+- Dictionary size counts as \(|\Delta|\).
+- \(\Delta\)Coh is counted (opens closed – opens introduced + defects repaired).
+- Findings and open questions are capped and do not contribute to coherence credit.
+- Initial encoding should remain lean; enrichment with full historical likelihoods, failure modes, or hybrid forms observed in praxis is a separate scored expansion.
+
+Current open items that would be touched:
+
+- Context-budget handling for any new glyphs or vocabulary (related to existing D-012 / D-013).
+- Explicit residual status of the prior-construction process itself.
+
+---
+
+## 7. Residual & Open Questions
+
+- Full prior distributions (beyond mean scores) and calibrated likelihoods from primary-source praxis remain to be constructed.
+- Stability of any \(A_i\) under real-world perturbation is not yet formalized.
+- No dynamics or strategic implications are supplied by this module.
+- Parallel morphological sets (`Anarcha-`, `Anarchi-`) are still held open.
+
+All further growth is itself subject to B7' and the ordered mixture under Boundary Principles.
+
+---
+
+*Module v0.1 — 2026-08-08*  
+*Compatible with ontology_kernel_v8.4.md. Does not alter T1–T5, structural Anarchy-Ontology, or B1–B8.*
 
 ---
 

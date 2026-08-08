@@ -1,7 +1,20 @@
-# Anarcho-Universalism — Core 16
+# Anarcho-Universalism — Core 16 (v1.1)
 
 *Compiled from primary source posts by @anarcho_app (2024-07-02 and 2025-04-12).*  
-*Morphological note: All sixteen are formed with the unmarked international binder **Anarcho-**. They sit inside the productive field opened by the bound form `Anarcho-` + X.*
+*Morphological note: All sixteen are formed with the unmarked international binder **Anarcho-**. They sit inside the productive field opened by the bound form `Anarcho-` + X.*  
+*v1.1 addition: explicit framing as praxis-prior archetypes (Bayesian-esque) for integration with the AI Universal Ontology Kernel.*
+
+---
+
+## 0. Framing Update (v1.1)
+
+The sixteen are treated as **archetypes** \(A_i\) whose parameter vectors \(\theta_i\) (binary criteria + scalar axes) are informed by **prior praxis** — recorded historical acts, organizational forms, property experiments, conflict patterns, and mutual-aid practices.
+
+- Priors \(\pi(\theta_i)\) are constructed from historical evidence, not from abstract preference or self-ascription alone.
+- New evidence updates the posterior under standard Bayesian discipline.
+- No bridge is permitted from any posterior into structural claims about the ruled-by relation \(R\) or into ascriptive verdicts about living speakers (NO_BRIDGE / B4).
+
+This framing keeps the original morphological and comparative content intact while making the sixteen available as updateable, praxis-grounded objects for the future-oriented kernel.
 
 ---
 
@@ -54,6 +67,8 @@ All sixteen are scored against the same fixed set of criteria:
 - Government (Authority ←→ Liberty)  
 - Society (Tradition ←→ Progress)
 
+In the archetype framing these become the components of the parameter vector \(\theta_i\). Historical praxis supplies the prior \(\pi(\theta_i)\).
+
 ---
 
 ## 3. Comparative Tables
@@ -83,8 +98,6 @@ All sixteen are scored against the same fixed set of criteria:
 - Syndicalism: Hubert Lagardelle, Albert Camus, Noam Chomsky  
 - Mutualism: Pierre-Joseph Proudhon, Thomas Paine  
 
----
-
 ### Table 2 — Economism / Naturalism / Primitivism / Egoism
 
 | Criterion                              | Economism | Naturalism | Primitivism | Egoism |
@@ -110,8 +123,6 @@ All sixteen are scored against the same fixed set of criteria:
 - Primitivism: John Zerzan  
 - Egoism: Max Stirner  
 
----
-
 ### Table 3 — Individualism / Trans-Humanism / Waterism / Communalism
 
 | Criterion                              | Individualism | Trans-Humanism | Waterism | Communalism |
@@ -136,8 +147,6 @@ All sixteen are scored against the same fixed set of criteria:
 - Trans-Humanism: William Godwin, Voltairine de Cleyre  
 - Waterism: similar to Naturism  
 - Communalism: Emma Goldman, Murray Bookchin  
-
----
 
 ### Table 4 — Identitism / Humanitarianism / Agorism / Pacifism
 
@@ -191,7 +200,8 @@ These parallel sets are not yet populated in the source material and are held as
 - Scoring values and exemplar attributions are taken directly from the 2025-04-12 tables.  
 - Some continuations (Waterism, Identitism, Economism, etc.) are less widely attested than the classical ones; their inclusion is source-faithful rather than a claim of equal historical weight.  
 - No bridge is made from these morphological or taxonomic facts into ascriptive judgments about speakers or movements.
+- **v1.1**: The scoring tables supply the initial prior means for \(\theta_i\). Full prior distributions and likelihood construction from primary-source praxis remain open for subsequent scored expansion under B7'.
 
 ---
 
-*End of file.*
+*End of file. v1.1 — 2026-08-08*
