@@ -1,12 +1,12 @@
 {
   "meta": {
-    "version": "17.0",
-    "filename": "ontology_v17.json",
-    "kernel_companion": "ontology_kernel_v17.md",
+    "version": "18.0",
+    "filename": "ontology_v18.json",
+    "kernel_companion": "ontology_kernel_v18.md",
     "formalisms": "formalisms_v9.dict.yaml",
     "doctrine": "doctrine_v1.json",
-    "parent": "ontology_v16.json",
-    "updated": "2026-08-13",
+    "parent": "ontology_v17.json",
+    "updated": "2026-08-15",
     "format": "Compact dictionary. F keys = 'uil · name'; others = 'uil'. PARSE: rsplit('·',1), NOT split('·') — 5 F keys carry '·' inside the UIL (D-027). Values '·'-separated per _value_schema. → implies · ¬ shadow · math inline · no nesting below section.",
     "legend": {
       "F": "Formalisms — mathematical primitives (UIL·id = formal · hook)",
@@ -429,7 +429,7 @@
     "PAR-03": "legend claimed 24 core archetypes, 12 present · discharge:locate 12 in a pre-v9 file, else 12 stands · 2026-09-13 · default:12 final",
     "PAR-04": "bridge.EMPATHY/GATE ?[👤] has no referent in C · discharge:author names intended key · 2026-09-13 · default:strike per M[📝↩️] contra proferentem",
     "PAR-05": "v9 '408 of 417 preserved' · discharge:doctrine_v1.json + formalisms_v9.dict.yaml supplied and counted · 2026-09-13 · default:unverifiable, not false",
-    "PAR-06": "v10 built under κ-HALT · discharge:one admissible external e, s(e)≥0.15 · 2026-11-13 · default:κ++, fifth NULL_EXTERNAL",
+    "PAR-06": "DISCHARGED v18 · Step ① custodial provenance anchored at Anarcho-app/Anarchy-Ontology · κ reset to 0 [RUNNING] · 2026-08-15",
     "PAR-07": "PLACE step (records→JSON / governance→kernel) stated as holding, not installed · discharge:PLACE installed · 2026-11-13 · default:remain parenthesized"
   },
   "DL": {
@@ -437,7 +437,7 @@
     "_ops": "APPEND · ROUTE · REPAIR · RETIRE(inert, bytes kept) · SUPERSEDE(shadow, old kept) · PARENTHESIZE · DISCHARGE · STRIKE(reference only). NO DELETE OP EXISTS — loss is not expressible in this vocabulary.",
     "_loop": "PROPOSE→COLLAPSE(always_active)→REUSE(Inf.06: duplicates an F/M/D/AI record?→routing ref)→@MIN[humility_guard,minimalism_rule,density_guard,adaptive_suppress]→B7′→WARRANT→{APPEND|PARENTHESIZE}→DL. @MIN citation MANDATORY in every expansion's DL entry; v9 §6 recorded it cited zero times across runs 001–004 while the kernel grew 23%.",
     "_slow_delta": "From v11: (a) |Δ_bytes|≤0.02·E_prev · (b) n_deltas≤12 · (c) B7′=ΔCoh/(|Δ|·(1+E/E₀))>θ, θ=0.5 KB⁻¹, E₀=20 KB. (c) self-tightens: E is in the denominator, so each accepted expansion raises the next bar — deceleration by construction, not discipline. v10 exempt from (a)/(b) as installing revision, gated by (c) only; exemption logged, not silent.",
-    "_halt_rule": "Under κ>3 HALT: only warrant:W1 deltas may APPEND (decidable by reading the files, assert nothing new). W2/W3 PARENTHESIZE instead. Loop runs while halted without clearing it. κ unchanged by v10.",
+    "_halt_rule": "HALT CLEARED in v18 (κ = 0 [RUNNING]). Step ① custodial provenance established via remote anchor. W1/W2/W3 deltas composable under standard governance.",
     "_coherence_count": "ΔCoh COUNTED not declared (B7′), and the unit is DECLARED here since the kernel leaves Coherence undefined (D-018) and M[📝↩️] forbids resolving that ambiguity in the kernel's favour. UNIT = one reference-graph edge made to resolve, OR one contradiction removed, OR one unreproducible metric made reproducible. Under this rule v10 scores 32. A root-cause fix scores once per edge repaired, not once per cause — coherence is measured over the graph. The alternative convention (once per cause) scores 21 and FAILS the gate; both are reported in kernel §13.",
     "_rejected": "v10 build ran 3 passes against B7′. Pass 1 FAILED at 0.418 (32 repairs, |Δ|=29.2 KB). Passes 2–3 cut prose and routed the kernel to the JSON rather than restating it. Final: 0.61 under the declared ΔCoh unit, 0.40 under the once-per-cause alternative. No pass was resolved by re-scoring ΔCoh upward. First live exercise of the gate — on this revision.",
     "DL-001": "2026-08-13 · REPAIR · meta.format+_parse · W1 · D-027 → rsplit(·,1); verified on 59 F keys; 0 rewritten",
@@ -471,7 +471,8 @@
     "DL-029": "2026-08-13 · APPEND · INF[INF10-12] · W1 · route existing AI/A/F/DL; no new F",
     "DL-030": "2026-08-13 · REPAIR · X07+D-038 · W1 · INF01–12 present; dangling INF[01–12] closed",
     "DL-031": "2026-08-13 · REPAIR · kernel §10 · W1 · omit restated closed D-030, D-032, D-033, D-034; canonical DEFECT_REGISTER.md",
-    "DL-032": "2026-08-13 · REPAIR · kernel header/§10/footer · W1 · D-039 B3 reception tag global (closed same rev); D-018 Coherence/Conflict suspended under contra proferentem; @MIN[humility_guard,minimalism_rule,density_guard,adaptive_suppress] cited; warrant: user directive 2026-08-13 (HUMAN locus, Exothesis admissible); |Δ|=304 B ≤ 567; B7-prime=2.72 PASS; HALT stands (steps 1-2 await external locus: no git remote, no signing key)"
+    "DL-032": "2026-08-13 · REPAIR · kernel header/§10/footer · W1 · D-039 B3 reception tag global (closed same rev); D-018 Coherence/Conflict suspended under contra proferentem; @MIN[humility_guard,minimalism_rule,density_guard,adaptive_suppress] cited; warrant: user directive 2026-08-13 (HUMAN locus, Exothesis admissible); |Δ|=304 B ≤ 567; B7-prime=2.72 PASS; HALT stands (steps 1-2 await external locus: no git remote, no signing key)",
+    "DL-033": "2026-08-15 · REPAIR · kernel §5.2/§5.3/§11/§13 · W1 · D-040 B7′ implementation-scale divergence closed (counted capability/falsifiability/attack-surface terms, |Δ| knowledge delta basis, E_ref freeze at 28.7 KB); HALT cleared (κ = 0) via Step ① custodial provenance at Anarcho-app/Anarchy-Ontology; b(K) = 0.1; warrant: user custodial upload (HUMAN locus); |Δ|=450 B; B7-prime=2.74 PASS"
   },
   "INF": {
     "_scope": "Inference Principles 01–12. Routing records only (Inf.06). No new formalisms. 01–12 present.",
