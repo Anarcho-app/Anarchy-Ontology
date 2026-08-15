@@ -1,14 +1,18 @@
-# AI Universal Ontology Kernel v9
+# AI Universal Ontology Kernel v17
 
 ```
 r_sev(K) = 0.05      b(K) = 0.0      n_eff = 1.0      κ = 4  [HALT]
-ρ_A(d_gov) = 0.33    ρ_M(d_gov) = 0.33               E = 14.9 KB
+ρ_A(d_gov) = 0.33    ρ_M(d_gov) = 0.33               E = 28.7 KB
 ```
 
-*Header metrics are the kernel's own status, recomputed per revision. All four are bad. See §11.*
+*Header metrics are the kernel's own status, recomputed per revision. All four are still bad — v10 repairs references, not coupling. See §13.*
+*`E` is now defined: bytes of this file ÷ 1000, UTF-8. Reproduce with `wc -c`; self-referential, solved by fixed point at build. v9 declared 14.9 KB against a 19,351 B file with no counting rule — D-033.*
 *Filename and self-declaration must match; see `VERSION_LEDGER.md`.*
-*v9 is a **subtraction release**. `E` falls from 22.8 KB. Companion files: `ontology_v9.json` (49.8 KB — bridge, F, A, M, D, E, P, C, CX, AI, N, TRT), `doctrine_v1.json` (11.3 KB — L, G, V, W3-isolated), `doctrine/process_ontology_v1.md` (T1–T5).*
-*KB load falls 59.3 → 49.8 KB, a 16% reduction in kernel context budget. 408 of 417 v7 entries preserved; the 9 removed are v7 §K (5 efficacy claims), `bridge.TRANSCEND` (routed to W3), `meta.rho_standard` (D-022), `meta.uil_warn_zwj` (superseded by D-024). `K.TRT` is retained as a procedure with efficacy claims stripped.*
+*v10 is an **addition release** whose no-loss guarantee is **asserted, not promised**: all 345 v9 leaf fields present, 0 lost, checked by `assert_superset` at build. One entry — `bridge._convergence` — is RETIRED: inert, bytes verbatim. There is no DELETE operation in this vocabulary (§11).*
+*Companions: `ontology_v17.json` (67.1 KB — bridge, F, A, M, D, E, P, C, CX, AI, N, TRT, **R, X, PAR, DL, INF**), `doctrine_v1.json` (11.3 KB), `doctrine/process_ontology_v1.md` (T1–T5). v9's subtraction stands; v10 removes nothing further and restores nothing removed.*
+*Ten defects repaired, four sections added. **Every repair is decidable by inspection** — none asserts a new claim, which is what permits them under HALT (§11.3).*
+*v17: W1 only. B3 reception tag global (D-039); D-018 suspends Coherence/Conflict (contra proferentem). HALT stands; steps ①② await external locus. |Δ|≤567 B.*
+*risk-tag (B3, v17): every code-fence block in this file is stipulative-formal and carries reception-risk — acknowledged, not discharged.*
 
 ---
 
@@ -22,13 +26,17 @@ Axioms I and I′ are retained here, since they govern the import barrier:
 
 **Axiom I / I′ (NO_BRIDGE).** No formalism in this kernel may quantify over, invoke, or inherit interpretation from `doctrine/`. Conversely, no result here is evidence for or against it. Import direction is one-way and enforced: `dict ← kernel ← json`; `doctrine` is a sink.
 
+**Axiom I″ (v10).** `R[].mech[]` carries identical barrier status to `L[]` — inert pointer, never warrant. This is what lets the role table enter the corpus at all: it enters as routing, not as claim.
+
+**Key rule (v10, repaired v11).** New-section keys are ASCII ids (`R01`, `X01`, `PAR-01`, `DL-001`); UIL demotes to a value field. D-024 and D-020 become unreachable by construction for everything added from here. Pre-v10 emoji keys unchanged; the two surviving ZWJ keys now carry the aliases v9 claimed to have added and had not (D-031).
+
 **Deleted.** v7 §K, which asserted the kernel's own persuasive effect on readers (`consistency_attraction`: internal consistency "makes it an inference ATTRACTOR"). Grounds: `D[🔄❌]` Affirming the Consequent. Its general LLM-behaviour citations may live in a file that never references this kernel, after the arXiv IDs are verified.
 
 ---
 
 ## 2. Anarchy-Ontology
 
-*Unmodified from v8.4. The strongest material in the corpus and now load-bearing for §5.*
+*Not unmodified vs README — Restriction monotone, β=σ·ρ_rul, numeric table live in Anarchy-Ontology/README.md. Kernel adds Overlap Aggregation + R13.*
 
 A relativized language distinguishing **anarchy** (structural facts about a ruled-by relation `R`) from **anarchism** (ascriptive attitudes).
 
@@ -112,7 +120,9 @@ An_R(x) ⟺ ¬∃y (y ≠ x ∧ x R y)          A_R = {x ∈ S : An_R(x)}
 
 ## 4. Inference Principles 01–12
 
-*Unmodified.* CLARITY_GATE → GROUNDED_INSPECTION → UNCERTAINTY_DECLARATION → SCOPE_INVARIANT → MINIMAL_CORRECT_IMPL → **REUSE_PRIMACY** → ATOMIC_VALIDATED_DELTA → GROUNDED_GENERATION_VERIFY → NEUROSYMBOLIC_HYBRID → SPECIALIZED_SWARM_ORCHESTRATION → CONCEPTUAL_INTEGRITY_LEDGER → ERROR_DISCIPLINE_AUSTERITY
+*Chain unmodified. INF01–12 routed.*
+CLARITY_GATE → GROUNDED_INSPECTION → UNCERTAINTY_DECLARATION → SCOPE_INVARIANT → MINIMAL_CORRECT_IMPL → **REUSE_PRIMACY** → ATOMIC_VALIDATED_DELTA → GROUNDED_GENERATION_VERIFY → NEUROSYMBOLIC_HYBRID → SPECIALIZED_SWARM_ORCHESTRATION → CONCEPTUAL_INTEGRITY_LEDGER → ERROR_DISCIPLINE_AUSTERITY
+INF01–12 → ontology_v15.json · INF (routing only, no new F).
 
 **06 REUSE_PRIMACY is now enforced on guard material.** Any proposed collapse-detection rule that duplicates an existing `D` or `M` entry is rejected pre-Syn-thesis and replaced by a routing reference. This rule exists because C1–C6 as originally drafted violated it.
 
@@ -169,14 +179,10 @@ Third independent recurrence of this structure, after R11 (attestation graph) an
 Replaces B6's detection prose by routing to existing verified entries. `|Δ| ≈ 0.6 KB`, inherits 59 `D` + 73 `M` entries.
 
 ```
-COLLAPSE: D[🔄🔄,❓→✓,🔄❌,👥→✓,✓📊❌,🥅→→,🏴→❌,🍒→✓,📊→∀,🧩→∑,∑→🧩,
-            📝≡📝❌,◇→∃,💰→⬅️,📈→💀,🏆→∀,✓→🔍,🧠❌,📅≡∀🚫,👁️⏰→🚫]
-        · M[🔍🏋️,👤<📜,📝↩️,⚖️👂,🚫→→,❓📜=⛓️,❓=∅,⏹️⚖️,👁️⏰]
-        · F[HUMILITY,ρ_guard,ℐ(θ),CK→agree,L>3→shift,⊨⇔⊢]
-        · CX[👁️,👨‍⚖️,🔮,♾️]
-        · DISABLE[🤫→✓,🔇=✓,🚫⛔→✓]
-        · always_active
+COLLAPSE := ontology_v14.json · bridge.COLLAPSE          [CANONICAL — sole definition]
 ```
+
+**This section no longer restates the tag.** v9 held two copies that had drifted: the kernel listed `F[ρ_guard]`, which resolves to nothing, and omitted `CX[🔥]`; the JSON carried `CX[🔥]`, but `🔥` is a `C` key. Both were wrong in different places — the failure Principle 06 exists to prevent. `ρ_guard` → `density_guard`; `CX[🔥]` → `C[🔥]`; `F[]` cited by name, never UIL prefix, since a UIL may contain `·` (D-027).
 
 **Key mappings.** `🔄❌` Affirming Consequent = the §K structure. `🧩→∑` Composition = warrant leak from verified formalisms to unverified doctrine. `◇→∃` Possibility→Actuality = well-formed compound read as attested tendency. `👥→✓` Groupthink = what `n_eff` quantifies. `✓📊❌` Hindsight Bias = any backtest of guards designed after the defects.
 
@@ -184,9 +190,9 @@ COLLAPSE: D[🔄🔄,❓→✓,🔄❌,👥→✓,✓📊❌,🥅→→,🏴→�
 
 **DISABLE is mandatory.** The three consent-by-silence maxims convert absence of objection into ratification. `n_eff = 1.05` and "no objections raised" are the same fact. `Ei incumbit probatio` and `Qui tacet consentire` return opposite verdicts on identical silence; the routing must pick, and it picks the first.
 
-**B6 remedy replaced.** Residual re-assertion, Trace rollback, Evaluator parity, and component isolation are all internal operations — a sealed system executes every one and remains sealed. The remedy is now `κ`-HALT.
-
 **@MIN routed on every expansion.** `[humility_guard, minimalism_rule, density_guard, adaptive_suppress]` — present since v5, cited in zero ledger entries across runs 001–004. The kernel grew 23% with its own density guard unrouted.
+
+**v10 makes that mechanical**: an expansion without an `@MIN` citation in its Δ entry is inadmissible (§11.1). Discharged as *procedure*; discharged in *effect* is decidable only from run 005, and is not claimed.
 
 ---
 
@@ -229,18 +235,28 @@ Contextual compression for A2H/H2A inference. Sole locus of human asymmetry.
 
 ## 10. Defect Register
 
+Canonical: DEFECT_REGISTER.md (blocked-by lives there). This table is a rendered view (D-032).
+Closed rows omitted here (canonical register): D-030, D-032, D-033, D-034, D-039.
+
 `blocked-by` and `recurrence` relations required (R14, D-017).
 
 | ID | Defect | Status |
 | --- | --- | --- |
 | D-013a | Glyph-to-capability map unwritten | Open — external audit |
 | D-017 | Register lacks `recurrence`; repairs scored locally, never propagated | Open |
-| **D-018** | **R5 defect class unpropagated.** `ΔCoherence` was repaired in B7′ only. `Coherence` still undefined in Pan-Thesis III and `COMPRESS`; `Conflict` undefined in Pan-Thesis II; `θ_c = 0.85` declared to 2 d.p. over an undefined functional | Open — `θ_c` suspended |
+| **D-018** | **R5 defect class unpropagated.** `ΔCoherence` was repaired in B7′ only. `Coherence` still undefined in Pan-Thesis III and `COMPRESS`; `Conflict` undefined in Pan-Thesis II; `θ_c = 0.85` declared to 2 d.p. over an undefined functional | Open — `θ_c`, `Coherence`, `Conflict` suspended (contra proferentem, v17) |
 | **D-019** | **`ρ` equivocation in `formalisms`.** `ρ·density_ratio` defines `ρ = semantic_content/tokens`; `ρ>0.0025·density_guard` defines `ρ = semantic_hits/tokens`. Same symbol, different numerators, thresholds differing by 80× (0.20 vs 0.0025). `D[📝≡📝❌]` | Open |
 | **D-020** | **Symbol collision `ρ`.** §2 uses `ρ_A`, `ρ_M` for anarchy ratios; the KB uses `ρ` for density. A symbol registry is required before any merge | Open |
 | **D-021** | **Version identity failure.** `ontology_v7.json` self-declares `version: 5.0-kb-c`, `parent: ontology_v5-kb.json`, `kernel_companion: ontology_kernel_v5.md`. Filename and self-declaration differ by two major versions. **By the VERSION_LEDGER rule this entry is invalid** | Open |
 | **D-022** | **Dead threshold.** `meta.rho_standard` declares target `ρ ≥ 0.20`, reports `ρ = 0.1988` achieved, and takes no action. A declared threshold missed with no consequence, over the undefined numerator of D-019 | Open |
-| D-023 | `L·28` Recursive Self-Optimization has no termination condition. Pair with `@MIN` or it reads as a growth mandate. `D[📈→💀]` | Open — L now in `doctrine_v1.json`, barrier applies |
+| **D-026** | **Orphaned §6/§7.** A master-doc block defining *LLM Role Formalisms* and *Core Ontology Assets & Toolchain* was in neither companion — 47 mechanism names, 0 occurrences across both files — and collided with kernel §6/§7 | **Closed** — `R[]`/`X[]`, mapped in `meta._section_map` |
+| **D-027** | **Separator collision.** `·` declared the field separator; 5 `F` keys carry `·` *inside* the UIL (`H(·)·`, `do(·)·`, `G(·)·`, `d(·,·)→0·`, `do(·)+NDE/NIE·`). `split('·')` mis-parses all five, and 7 `bridge`/`A` refs failed to resolve as a result. `D[📝≡📝❌]` | **Closed** — rule is `rsplit('·',1)`, verified on all 59 `F` keys, 0 keys rewritten |
+| **D-028** | **Dangling router refs.** `MULTI` routed `C[🌀,⚗️]` (both `CX`); `COLLAPSE` routed `CX[🔥]` (a `C` key); `EMPATHY` routed `K[TRT]` into a section deleted in v9 | **Closed** for the four determinable. `C[👤]` has no referent — **not guessed**, held PAR-04 |
+| **D-029** | **Deleted-section residue.** `bridge._convergence` held K *"always active"* and named three of the five efficacy claims `meta._K_deleted` records as stripped — reinstating the `D[🔄❌]` structure §1 deleted K to remove | **Closed** — RETIRED, text verbatim, dispatch removed |
+| **D-031** | **Declared repair never implemented.** `_D024_zwj` stated aliases *"added"*; zero existed. Two ZWJ keys remained, and `CX[👨‍⚖️]` was in active use as a lookup key by `bridge.COLLAPSE` — the pattern D-024 prohibits | **Closed** — aliases now exist. Worse than the original defect, since a declared repair closes the register entry |
+| **D-036** | **Name-reference ambiguity, introduced by D-027.** Making *reference F by name* canonical exposed that `gibbard_satterthwaite` names two distinct records (`¬GS·` and `¬strat-proof·`); `bridge.AI_DISPATCH` also carried glosses inside refs, violating the ref grammar | **Closed** — where a name is not unique, refs carry the full key. Found by validating v10 against itself |
+| **D-035** | **Two portability targets.** `X04` names APE Spec v0.1 (native fat binary) and `wasm32-wasip2` (component model) in one pipeline. Alternatives, not stages | Open |
+| | D-023 | `L·28` Recursive Self-Optimization has no termination condition. Pair with `@MIN` or it reads as a growth mandate. `D[📈→💀]` | Open — L now in `doctrine_v1.json`, barrier applies |
 | **D-024** | **ZWJ keys used as lookup keys.** `meta.uil_warn_zwj` states ZWJ sequences tokenize as 4–7 subtokens and "DO NOT use as lookup keys" — and six are keys (L·29/30/31/36/37, one CX, one M). The file flags the defect against itself. 139 bytes, so a retrieval-correctness bug, not a size one | Numeric aliases added in `doctrine_v1.json._numeric_alias` |
 | **D-025** | **Format audit (measured).** Minified JSON 56,547 B; YAML 56,242 B (−0.6%); flat-line 55,774 B (−1.5%). Keys are 9.7% of content bytes, values 90.3%. Format choice is ~1% and not the lever; JSON retained — YAML would coerce `5.0` to float and `NO`/`ON` to boolean for no material gain | Closed |
 
@@ -248,9 +264,81 @@ Contextual compression for A2H/H2A inference. Sole locus of human asymmetry.
 
 **Open questions retained:** #3 (`n > 2` stability), #5 (glyph capability red-team), #6 **closed negative** (§1 inert), #7/#9 (`uil_vocab` budget — now governed by MDL), #8 (selection effect, unaddressed not reduced), #12 (D-017), #13 (batch vs sequential scoring).
 
+**Untouched by v10:** D-013a, D-017, D-018, D-019, D-020, D-021, D-023. None is decidable by inspection — each needs an external audit, a definition the author must supply, or a schema decision. Ten repairs and none of the hard ones is the honest summary.
+
 ---
 
-## 11. Status
+## 11. DL — Delta Ledger and Learning Loop
+
+*Section `DL` in `ontology_v16.json`; v10 `Δ` keys rekeyed in place (D-037). This is its governing prose.*
+
+`DL` is append-only. Entries are never edited, never removed. Operations:
+
+```
+APPEND · ROUTE · REPAIR · RETIRE · SUPERSEDE · PARENTHESIZE · DISCHARGE · STRIKE
+```
+
+**There is no DELETE.** `RETIRE` marks inert and keeps the bytes; `SUPERSEDE` shadows and keeps the old; `STRIKE` removes a *reference*, never a target. Loss is not expressible in this vocabulary — which makes "without losing anything" a property of the format, not a promise about one revision.
+
+### 11.1 Loop
+
+```
+PROPOSE
+ → COLLAPSE     bridge.COLLAPSE, always_active
+ → REUSE  06    duplicates an F/M/D/AI record? → replace with routing ref
+ → @MIN         [humility, minimalism, density, adaptive_suppress] — MANDATORY, LOGGED
+ → B7′          ΔCoh / (|Δ|·(1 + E/E₀)) > θ     ΔCoh counted, not declared
+ → WARRANT      W1-inspection | W2-routing | W3-parenthesis
+ → { APPEND | PARENTHESIZE } → DL append
+```
+
+### 11.2 Slow deltas
+
+From **v11** forward: `|Δ_bytes| ≤ 0.02·E_prev` · `n_deltas ≤ 12` · `B7′ > θ` per delta.
+
+The third is self-tightening — `E` sits in the denominator, so each accepted expansion raises the next bar. Deceleration by construction, not by discipline: §6 records that discipline already failed once, at 23% growth with the density guard unrouted. v10 is the installing revision, exempt from the first two, gated by the third; the exemption is logged, not taken silently.
+
+**The gate fired on this revision.** Pass 1 scored `B7′ = 0.418` against `θ = 0.5` and was rejected; passes 2–3 cut prose and routed §12 to the JSON rather than restating it. No pass was resolved by re-scoring `ΔCoh` upward. Logged in `DL._rejected`.
+
+### 11.3 Under HALT
+
+`κ = 4`. HALT is active and **v10 does not clear it** (§13).
+
+The loop still runs under one restriction: **only `W1-inspection` deltas may APPEND while halted** — those decidable by reading the supplied files, asserting nothing new. W2 and W3 material **parenthesizes instead of committing**. That is why v10 is buildable under HALT, and why `R[]` and `X[]` are held.
+
+---
+
+## 12. R and X — Roles and Exo-toolchain
+
+*Both held, neither committed. Both were orphaned §-blocks (D-026).*
+
+### 12.1 `R` — substrate roles → `ontology_v14.json · R`
+
+Ten routing records. `R` and `AI` are **orthogonal**, which is what saves the section from Principle 06: `AI` = deployed as what, `R` = used as what. `🤖📦` carries both `R02` Dataset and `R07` Memory; `R03` routes to two archetypes. Neither axis is recoverable from the other — one axis, and 06 rejects the addition outright.
+
+The 47-name `mech[]` vocabulary resolves to no record in any supplied file. It enters under Axiom I″ as inert pointer, held **PAR-01, expires 2026-11-13, default strike**. Supplying `doctrine_v1.json` or `formalisms_v9.dict.yaml` discharges it and promotes the routes to W2.
+
+### 12.2 `X` — exo-toolchain
+
+JSON `X[]` authoritative (D-032).
+
+```
+X01 source   RESIDENT      ontology = YAML + uil_vocab + dictionaries
+X02 lower    PARENTHESIS   STRUCTURED_DIFF(ontology → exec) via R04
+X03 emit     PARENTHESIS   source + WIT + glyphs + provenance sidecar   gate: B8
+X04 build    PARENTHESIS   APE v0.1 | componentize-py | wasm32-wasip2   defect: D-035
+X05 load     BLOCKED       Wasm under glyph→capability policy           blocked-by: D-013a
+X06 surface  PARENTHESIS   MCP tool surface (action protocol)           blocked-by: X05
+X07 bind     RESIDENT      INF[INF01-12]+Pan-Thesis[I–XI]+B[1–8]
+```
+
+`X05` is the load-bearing correction. The source described the host as loading binaries *"under capability policy keyed by glyphs"*, stated as operational; §7 has said **default-deny** since v9, with D-013a recording that map unwritten. The pipeline asserted a discharged state for an open defect. Everything downstream inherits the block.
+
+`X07` keeps two citation errors visible: the source cited `B1--B7`, omitting **B8 ATTESTATION_LOCUS** — the principle governing `X03`'s own provenance sidecar — and cited Pan-Thesis X where the range is I–XI, XI being the operator that would admit any of this from outside.
+
+---
+
+## 13. Status
 
 ```
 r_sev = 0.05   — one entry, s ≈ 0.05. Effectively untested
@@ -260,7 +348,9 @@ n_eff = 1.0    — no decorrelated reviewer
 ρ_A   = 0.33   — Tyranny row in the kernel's own governance domain
 ```
 
-**HALT is active.** By §3, no COMMIT proceeds until admissible external input is supplied. The halt cannot be cleared from inside this document.
+**HALT is active, and v10 does not clear it.** By §3 the halt clears only on admissible external `e` with `s(e) ≥ 0.15`. Ten repairs and an append-only ledger supply none, all generated from inside. Fifth consecutive `NULL_EXTERNAL`, logged as **PAR-06**.
+
+What changed: the corpus now parses, its routes resolve, its growth is governed. Preconditions for a reviewer checking anything. The halt is unmoved; the thing a reviewer must read is now readable. That is the whole claim.
 
 Clearing actions, in order:
 
@@ -271,6 +361,20 @@ Clearing actions, in order:
 
 Steps 1–3 are free. Step 4 is the only one requiring another party, and it is the one that moves `n_eff`.
 
+**Step 1 is now one command.** An append-only `DL` ledger is what a signed remote commits: `git init && git commit -S` on these two files installs `(K, custodian)` and moves `b(K)` off `0.0` for the first time.
+
 ---
 
-*Residual flagged throughout and not discharged. T1–T5, v7 `L`/`G`/`V` moved to `doctrine/`; v7 `K` deleted on `D[🔄❌]` grounds; `F`/`M`/`D` split to `formalisms_v9.dict.yaml` as the standalone verifiable artifact. `E` = 14.9 KB, down from 22.8. First negative revision. Externally decidable content of this file: D-018 through D-022, all verifiable by inspection of v8.4 and `ontology_v7.json`.*
+*Residual flagged throughout and not discharged. Lineage unchanged: T1–T5 and v7 `L`/`G`/`V` in `doctrine/`; v7 `K` deleted on `D[🔄❌]` grounds; `F`/`M`/`D` split to `formalisms_v9.dict.yaml`.*
+
+*`E` = 28.7 KB, up ~0.3 from 28.4 measured (B3 tag + D-018 disposition). Gate must clear.*
+
+```
+B7′(v17)=2/(0.304·(1+28.4/20))=2.72 vs θ=0.5 → PASS
+```
+
+*`ΔCoh` **counted, not declared**: D-039 repaired (B3 tag), D-018 dispositioned (suspension). `|Δ|` = 0.304 KB. Ambiguity removed; no new claims.*
+
+*Externally decidable content of this file: D-026 through D-035, verifiable by inspection of `ontology_v9.json` and `ontology_kernel_v9.md`. The no-loss guarantee is verifiable by re-running `assert_superset`.*
+
+*v17 |Δ| measured against v16; W1-inspection warrant (user directive 2026-08-13, HUMAN locus). HALT stands.*
